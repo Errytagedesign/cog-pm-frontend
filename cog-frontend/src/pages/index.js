@@ -8,6 +8,7 @@ import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
 import stroke from "../../public/assets/icons/Stroke 1.png";
 import Location from "../../public/assets/icons/Location.png";
+import Rectangle from "../../public/assets/images/Rectangle 1.png"
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function Home() {
       <hr className="my-2 border-1 border-hr" />
       <Header />
       <Seacrh />
+      <Rentals />
     </>
   );
 }
@@ -68,11 +70,42 @@ const Seacrh = () => {
       <div>
         <ul className="flex justify-center mt-4 text-lightGrey">
           <li className="py-1 px-2">Higlights</li>
-          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">Warehouse/storage facility</li>
-          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">Flat/apartment</li>
-          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">Whole home</li>
+          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">
+            Warehouse/storage facility
+          </li>
+          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">
+            Flat/apartment
+          </li>
+          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">
+            Whole home
+          </li>
         </ul>
       </div>
     </>
+  );
+};
+
+const Rentals = () => {
+  return (
+    <section className="flex justify-between py-8 px-8 bg-rentalsColor w-4/5 m-auto mt-12 rounded">
+      <div className="flex-col">
+        <div className="bg-primary w-max py-2 px-6 rounded-2xl text-white">
+          For rentals
+        </div>
+        <div className="text-white text-2xl pt-6">
+          Access to diverse properties <br /> for free.
+        </div>
+        <p className="text-white text-l pt-12">
+          Make personalized choices on your property <br /> search and meet the
+          homeowners and <br /> managers who have what you want.
+        </p>
+        <div className="text-xs text-primary bg-white text-center mt-8 w-max px-20 py-2  rounded">SEARCH PROPERTIES</div>
+      </div>
+      <div>
+        <div className="absolute"><Image src={Rectangle }/></div>
+        <div className=""><Image src={Rectangle }/></div>
+        <div className="relative"><Image src={Rectangle }/></div>
+      </div>
+    </section>
   );
 };
