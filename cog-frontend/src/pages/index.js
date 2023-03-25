@@ -69,7 +69,7 @@ const Seacrh = () => {
       </main>
       <div>
         <ul className="flex justify-center mt-4 text-lightGrey">
-          <li className="py-1 px-2">Higlights</li>
+          <li className="py-1 px-2" onClick={handleClick}>Higlights</li>
           <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">
             Warehouse/storage facility
           </li>
@@ -101,10 +101,10 @@ const Rentals = () => {
         </p>
         <div className="text-xs text-primary bg-white text-center mt-8 w-max px-20 py-2  rounded">SEARCH PROPERTIES</div>
       </div>
-      <div>
-        <div className="absolute"><Image src={Rectangle }/></div>
-        <div className=""><Image src={Rectangle }/></div>
-        <div className="relative"><Image src={Rectangle }/></div>
+      <div className="relative">
+        <div className="absolute top-0 left-0"><Image src={Rectangle }/></div>
+        <div className="absolute top-10 left-10"><Image src={Rectangle }/></div>
+        <div className="absolute top-20 left-20"><Image src={Rectangle }/></div>
       </div>
     </section>
   );
