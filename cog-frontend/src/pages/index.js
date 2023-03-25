@@ -12,7 +12,6 @@ import Location from "../../public/assets/icons/Location.png";
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
- 
   return (
     <>
       <Navbar />
@@ -38,27 +37,42 @@ const Header = () => {
 };
 
 const Seacrh = () => {
-  const handleClick = () =>{
-    console.log('Clicked');
-  }
+  const handleClick = () => {
+    console.log("Clicked");
+  };
   return (
-    <main className="flex mt-10 bg-lighterGrey lg:w-1/2 md:w-3/4 m-auto justify-between h-10 pl-2">
-      <div className="w-full flex items-center">
-        <Image src={seacrh} />
-        <input
-          type="text"
-          className="bg-lighterGrey h-full w-3/6 ml-2 pl-2 outline-2 outline-lightGrey "
-          placeholder="What property are you looking to rent?"
-        />
-        <Image src={stroke} className="items-center ml-2" />
-        <Image src={Location} className="items-center ml-6 mr-4" />
-        <input
-          type="text"
-          className="h-full bg-lighterGrey w-28 pl-2 outline-none"
-          placeholder="Local Area"
-        />
+    <>
+      <main className="flex mt-10 bg-lighterGrey lg:w-1/2 md:w-3/4 m-auto justify-between h-10 pl-2">
+        <div className="w-full flex items-center">
+          <Image src={seacrh} />
+          <input
+            type="text"
+            className="bg-lighterGrey h-full w-3/6 ml-2 pl-2 outline-none "
+            placeholder="What property are you looking to rent?"
+          />
+          <Image src={stroke} className="items-center ml-2" />
+          <Image src={Location} className="items-center ml-6 mr-4" />
+          <input
+            type="text"
+            className="h-full bg-lighterGrey w-28 pl-2 outline-none"
+            placeholder="Local Area"
+          />
+        </div>
+        <div
+          className="bg-primary text-white px-5 py-2 rounded-r"
+          onClick={handleClick}
+        >
+          Submit
+        </div>
+      </main>
+      <div>
+        <ul className="flex justify-center mt-4 text-lightGrey">
+          <li className="py-1 px-2">Higlights</li>
+          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">Warehouse/storage facility</li>
+          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">Flat/apartment</li>
+          <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">Whole home</li>
+        </ul>
       </div>
-      <div className="bg-primary text-white px-5 py-2 rounded-r" onClick={handleClick}>Submit</div>
-    </main>
+    </>
   );
 };
