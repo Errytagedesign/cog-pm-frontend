@@ -3,7 +3,7 @@ import logo1 from "../public/assets/icons/COG Logo.png";
 const Navbar = () => {
   return (
     <>
-      <nav className="flex justify-between px-24 items-center">
+      <nav className="flex justify-between lg:px-24 items-center md:px-2">
         <div>
           <Image src={logo1} alt="Cog Logo" />
         </div>
