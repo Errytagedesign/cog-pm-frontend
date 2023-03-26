@@ -13,7 +13,8 @@ module.exports = {
         hr: '#C4C4C4',
         lightGrey: '#999999',
         lighterGrey: 'rgba(247, 247, 247, 0.9)',
-        rentalsColor: '#679DC0'
+        rentalsColor: '#679DC0',
+        managerColor: '#62909F'
 
       }
     },

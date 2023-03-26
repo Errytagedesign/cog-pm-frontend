@@ -8,7 +8,9 @@ import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
 import stroke from "../../public/assets/icons/Stroke 1.png";
 import Location from "../../public/assets/icons/Location.png";
-import Rectangle from "../../public/assets/images/Rectangle 1.png"
+import Rectangle from "../../public/assets/images/Rectangle 1.png";
+import Rectangle2 from "../../public/assets/images/Rectangle 2.png";
+import Image8 from "../../public/assets/images/image 8.png";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +22,7 @@ export default function Home() {
       <Header />
       <Seacrh />
       <Rentals />
+      <PropertyMangaers />
     </>
   );
 }
@@ -69,7 +72,9 @@ const Seacrh = () => {
       </main>
       <div>
         <ul className="flex justify-center mt-4 text-lightGrey">
-          <li className="py-1 px-2" onClick={handleClick}>Higlights</li>
+          <li className="py-1 px-2" onClick={handleClick}>
+            Higlights
+          </li>
           <li className="py-1 px-2 mx-1 items-center  border-2 border-Grey rounded-full">
             Warehouse/storage facility
           </li>
@@ -87,9 +92,9 @@ const Seacrh = () => {
 
 const Rentals = () => {
   return (
-    <section className="flex justify-between py-8 px-8 bg-rentalsColor w-4/5 m-auto mt-12 rounded">
+    <section className="flex justify-between py-8 px-8 h-max bg-rentalsColor w-4/5 m-auto my-12 relative rounded">
       <div className="flex-col">
-        <div className="bg-primary w-max py-2 px-6 rounded-2xl text-white">
+        <div className="bg-primary w-max py-2 px-6 rounded-2xl text-white text-xs">
           For rentals
         </div>
         <div className="text-white text-2xl pt-6">
@@ -99,12 +104,47 @@ const Rentals = () => {
           Make personalized choices on your property <br /> search and meet the
           homeowners and <br /> managers who have what you want.
         </p>
-        <div className="text-xs text-primary bg-white text-center mt-8 w-max px-20 py-2  rounded">SEARCH PROPERTIES</div>
+        <div className="text-xs text-primary bg-white text-center mt-8 w-max px-20 py-2  rounded">
+          SEARCH PROPERTIES
+        </div>
       </div>
-      <div className="relative">
-        <div className="absolute top-0 left-0"><Image src={Rectangle }/></div>
-        <div className="absolute top-10 left-10"><Image src={Rectangle }/></div>
-        <div className="absolute top-20 left-20"><Image src={Rectangle }/></div>
+      <div className=" flex">
+        {/* <div className="relative top-10 left-10 ">
+          <Image src={Rectangle} height={1000} />
+        </div>
+        <div className="absolute top-8 left-8">
+          <Image src={Rectangle2} />
+        </div>
+        <div className="relative top-3 left-20">
+          <Image src={Rectangle} />
+        </div> */}
+      </div>
+    </section>
+  );
+};
+
+const PropertyMangaers = () => {
+  return (
+    <section className="flex justify-between   h-max bg-managerColor w-4/5 m-auto my-12 relative rounded">
+      <div className="flex-col px-10 pt-12">
+        <div className="bg-primary w-max py-2 px-6 rounded-2xl text-white text-xs">
+          For property owners and managers
+        </div>
+        <div className="text-white text-2xl pt-6">
+          End-to-end solution for cost <br /> efficiency and execution.
+        </div>
+        <p className="text-white text-l pt-12">
+          Digitalize your entire property operations <br /> across sales inbound
+          prospecting, property <br /> operations, customer (tenant and
+          landlord)
+          <br /> relations and back-office.
+        </p>
+        <div className="text-xs text-primary bg-white text-center mt-8 w-max px-20 py-2  rounded">
+          GET STARTED
+        </div>
+      </div>
+      <div className="w-1/2 pt-12">
+        <Image src={Image8} />
       </div>
     </section>
   );
