@@ -14,7 +14,8 @@ module.exports = {
         lightGrey: '#999999',
         lighterGrey: 'rgba(247, 247, 247, 0.9)',
         rentalsColor: '#679DC0',
-        managerColor: '#62909F'
+        managerColor: '#62909F',
+        benefitColor: '#4B4B4B'
 
       }
     },

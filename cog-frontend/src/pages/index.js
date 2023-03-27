@@ -11,7 +11,8 @@ import Location from "../../public/assets/icons/Location.png";
 import Rectangle from "../../public/assets/images/Rectangle 1.png";
 import Rectangle2 from "../../public/assets/images/Rectangle 2.png";
 import Image8 from "../../public/assets/images/image 8.png";
-
+import benefitData from "../../Data/benefit.js";
+import { useState, useEffect } from "react";
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -23,6 +24,11 @@ export default function Home() {
       <Seacrh />
       <Rentals />
       <PropertyMangaers />
+      <BenefitHeader />
+      <div className="flex justify-center w-full">
+        <Benefit />
+      </div>
+      <HowItWorks />
     </>
   );
 }
@@ -147,5 +153,61 @@ const PropertyMangaers = () => {
         <Image src={Image8} />
       </div>
     </section>
+  );
+};
+const BenefitHeader = () => {
+  return (
+    <h1 className="flex justify-center mb-10 text-primary text-2xl uppercase">
+      Benefits
+    </h1>
+  );
+};
+const Benefit = () => {
+  console.log(benefitData);
+  // const items = benefitData.json
+  const [benefits, setBenefits] = useState([]);
+  const fetchBenefits = async () => {
+    const response = await fetch(`/api/benefits`);
+    const data = await response.json();
+    setBenefits(data);
+  };
+  useEffect(() => {
+    fetchBenefits();
+  }, []);
+  return (
+    <>
+      {benefits.map((benefit) => {
+        return (
+          <div
+            key={benefit.id}
+            className=" text-start w-1/4 px-4 py-12 text-benefitColor border-2 border-dashed rounded border-primary m-4 p-4"
+          >
+            <div className="flex justify-center">
+              <Image
+                src={`/../public/assets/icons/${benefit.image}`}
+                width={30}
+                height={30}
+              />
+            </div>
+            <div className="text-2xl text-center py-4">{benefit.heading}</div>
+            <div className="">{benefit.text}</div>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+const HowItWorks = () => {
+  return (
+    <>
+      <h1 className="uppercase text-2xl flex justify-center w-full text-primary mt-4">
+        How It Works
+      </h1>
+      <section>
+        <div><Image /></div>
+        <div></div>
+      </section>
+    </>
   );
 };
