@@ -11,6 +11,7 @@ import Location from "../../public/assets/icons/Location.png";
 import Rectangle from "../../public/assets/images/Rectangle 1.png";
 import Rectangle2 from "../../public/assets/images/Rectangle 2.png";
 import Image8 from "../../public/assets/images/image 8.png";
+import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
 import { useState, useEffect } from "react";
 // const inter = Inter({ subsets: ['latin'] })
@@ -28,7 +29,7 @@ export default function Home() {
       <div className="flex justify-center w-full">
         <Benefit />
       </div>
-      <HowItWorks />
+      <ForRentals />
     </>
   );
 }
@@ -162,6 +163,7 @@ const BenefitHeader = () => {
     </h1>
   );
 };
+
 const Benefit = () => {
   console.log(benefitData);
   // const items = benefitData.json
@@ -198,15 +200,41 @@ const Benefit = () => {
   );
 };
 
-const HowItWorks = () => {
+const ForRentals = () => {
+  const [rentals, setRentals] = useState([]);
+  const fetchRentals = async () => {
+    const response = await fetch(`/api/rentals`);
+    const data = await response.json();
+    setRentals(data);
+  };
+  useEffect(() => {
+    fetchRentals();
+  }, []);
   return (
     <>
-      <h1 className="uppercase text-2xl flex justify-center w-full text-primary mt-4">
-        How It Works
-      </h1>
-      <section>
-        <div><Image /></div>
-        <div></div>
+      <div className="uppercase flex w-full justify-center py-12 text-primary text-2xl  font-bold">how it works</div>
+      <section className="flex w-full justify-center m-auto">
+        <div className=" w-1/2 flex justify-end items-center">
+          <Image src={iPhone} width={330} />
+        </div>
+        <div className="ml-44">
+          <div className="text-3xl font-bold">
+            For renters
+          </div>
+          {rentals.map((rental) => {
+            return (
+              <div key={rental.id} className="w-full flex-col  ml-">
+                <ul>
+                  <li>
+                     <span className="font-bold text-primary text-2xl pr-2">{rental.id}</span>
+                      <span className="pt-8 font-bold text-xl  w-full">{rental.heading}</span>
+                  </li>
+                </ul>
+                <p className="pl-6 pt-6 pb-8 w-2/3 text-xl">{rental.text}</p>
+              </div>
+            );
+          })}
+        </div>
       </section>
     </>
   );

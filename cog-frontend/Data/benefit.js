@@ -9,7 +9,7 @@ export const benefits = [
         id: 2,
         image: 'fi_cloud-lightning.png',
         heading: 'Cloud based support',
-        text: 'We provide tenant onboarding, property operations support (including financial tools) for property managers and owners..'
+        text: 'We provide tenant onboarding, property operations support (including financial tools) for property managers and owners.'
     },
     {
         id: 3,
