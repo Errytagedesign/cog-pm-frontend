@@ -1,8 +1,3 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import { Inter } from 'next/font/google'
-// import styles from '@/styles/Home.module.css'
-
 import Navbar from "../../components/navbar";
 import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
@@ -14,7 +9,7 @@ import Image8 from "../../public/assets/images/image 8.png";
 import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
 import { useState, useEffect } from "react";
-// const inter = Inter({ subsets: ['latin'] })
+import managerImage from "../../public/assets/images/Frame 157.png";
 
 export default function Home() {
   return (
@@ -30,6 +25,7 @@ export default function Home() {
         <Benefit />
       </div>
       <ForRentals />
+      <ForManagers />
     </>
   );
 }
@@ -212,28 +208,77 @@ const ForRentals = () => {
   }, []);
   return (
     <>
-      <div className="uppercase flex w-full justify-center py-12 text-primary text-2xl  font-bold">how it works</div>
+      <div className="uppercase flex w-full justify-center py-12 text-primary text-2xl  font-bold">
+        how it works
+      </div>
       <section className="flex w-full justify-center m-auto">
         <div className=" w-1/2 flex justify-end items-center">
           <Image src={iPhone} width={330} />
         </div>
         <div className="ml-44">
           <div className="text-3xl font-bold">
-            For renters
+            For renters <br /> <br />
           </div>
           {rentals.map((rental) => {
             return (
               <div key={rental.id} className="w-full flex-col  ml-">
                 <ul>
                   <li>
-                     <span className="font-bold text-primary text-2xl pr-2">{rental.id}</span>
-                      <span className="pt-8 font-bold text-xl  w-full">{rental.heading}</span>
+                    <span className="font-bold text-primary text-2xl pr-2">
+                      {rental.id}
+                    </span>
+                    <span className="pt-8 font-bold text-xl  w-full">
+                      {rental.heading}
+                    </span>
                   </li>
                 </ul>
                 <p className="pl-6 pt-6 pb-8 w-2/3 text-xl">{rental.text}</p>
               </div>
             );
           })}
+        </div>
+      </section>
+    </>
+  );
+};
+
+const ForManagers = () => {
+  const [managers, setManagers] = useState([]);
+  const fetchManagers = async () => {
+    const response = await fetch(`/api/managers`);
+    const data = await response.json();
+    setManagers(data);
+  };
+  useEffect(() => {
+    fetchManagers();
+  }, []);
+  return (
+    <>
+      <section className="flex w-full justify-center m-auto mt-14">
+        <div className="ml-32">
+          <div className="text-3xl font-bold w-3/4">
+            For property managers/owners <br /> <br />
+          </div>
+          {managers.map((manager) => {
+            return (
+              <div key={manager.id} className="w-3/4 flex-col">
+                <ul>
+                  <li>
+                    <span className="font-bold text-primary text-2xl pr-2">
+                      {manager.id}
+                    </span>
+                    <span className="pt-8 font-bold text-xl  w-full">
+                      {manager.heading}
+                    </span>
+                  </li>
+                </ul>
+                <p className="pl-6 pt-6 pb-8 w-3/4 text-xl">{manager.text}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div className=" w-4/5 flex justify-end items-center">
+          <Image src={managerImage} width={1000} />
         </div>
       </section>
     </>

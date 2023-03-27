@@ -644,6 +644,14 @@ video {
   margin-left: 11rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.ml-32 {
+  margin-left: 8rem;
+}
+
 .flex {
   display: flex;
 }
@@ -696,6 +704,10 @@ video {
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .flex-col {
