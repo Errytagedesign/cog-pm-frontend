@@ -1,0 +1,16 @@
+.apply {
+  margin-bottom: 100px;
+  .inputContainer {
+    margin-bottom: 1em;
+
+    input,
+    select {
+      border: solid 1px var(--green);
+      padding: 0.5em;
+      border-radius: 5px;
+    }
+    label {
+      margin-bottom: 0.5em;
+    }
+  }
+}
