@@ -329,38 +329,38 @@ const Why = () => {
       <div className="flex justify-between w-9/12 m-auto text-start ">
         {/* Change the width to 80% or greater */}
         <div className="items-center w-1/4  pr-10">
-          <span className="flex justify-center">
+          <span className="flex justify-center bg-sliderColor w-max p-8 rounded-2xl m-auto">
             <Image src={sliders} />
           </span>
           <h1 className="py-4 font-bold text-2xl">Full Control</h1>
-          <p className="text-start">
+          <p className="text-start text-xs font-bold font-medium">
             We have developed a full  stack of tools to improve {" "}
             your rental experience.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
-          <span className="flex justify-center">
+          <span className="flex justify-center bg-databaseColor w-max p-8 rounded-2xl m-auto">
             <Image src={database} />
           </span>
           <h1 className="py-4 font-bold text-2xl">No hidden charges </h1>
-          <p className="text-start">
+          <p className="text-start text-xs font-bold font-medium">
             No hidden charges We charge a specific price  for each specific user
             type. Our value added services are also transparent.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
-          <span className="flex justify-center">
+          <span className="flex justify-center bg-keyColor w-max p-8 rounded-2xl m-auto">
             <Image src={key} />
           </span>
           <h1 className="py-4 font-bold text-2xl">Resident Center</h1>
-          <p className="text-start">We help you get and keep higher value clients.</p>
+          <p className="text-start text-xs font-bold font-medium">We help you get and keep higher value clients.</p>
         </div>
         <div className=" w-1/4 pr-10">
-          <span className="flex justify-center">
+          <span className="flex justify-center bg-searchColor w-max p-8 rounded-2xl m-auto">
             <Image src={database} />
           </span>
           <h1 className="py-4 font-bold text-2xl">Insightful Search</h1>
-          <p className="text-start">We help you get access to in-class properties stress-free.</p>
+          <p className="text-start text-xs font-bold font-medium">We help you get access to in-class properties stress-free.</p>
         </div>
       </div>
       <div>hi</div>

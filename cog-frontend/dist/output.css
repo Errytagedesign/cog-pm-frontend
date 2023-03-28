@@ -796,8 +796,32 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-sliderColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(210 244 255 / var(--tw-bg-opacity));
+}
+
+.bg-databaseColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 115 108 / var(--tw-bg-opacity));
+}
+
+.bg-keyColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(166 159 247 / var(--tw-bg-opacity));
+}
+
+.bg-searchColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 224 165 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-10 {
@@ -927,6 +951,14 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
