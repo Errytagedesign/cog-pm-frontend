@@ -3,14 +3,16 @@ import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
 import stroke from "../../public/assets/icons/Stroke 1.png";
 import Location from "../../public/assets/icons/Location.png";
-import Rectangle from "../../public/assets/images/Rectangle 1.png";
-import Rectangle2 from "../../public/assets/images/Rectangle 2.png";
 import Image8 from "../../public/assets/images/image 8.png";
 import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
 import { useState, useEffect } from "react";
 import managerImage from "../../public/assets/images/Frame 157.png";
 import biodun from "../../public/assets/images/biodun.png";
+import sliders from "../../public/assets/icons/fi_sliders.png";
+import database from "../../public/assets/icons/fi_database.png";
+import key from "../../public/assets/icons/fi_key.png";
+
 export default function Home() {
   return (
     <>
@@ -27,6 +29,7 @@ export default function Home() {
       <ForRentals />
       <ForManagers />
       <Stories />
+      <Why />
     </>
   );
 }
@@ -277,7 +280,7 @@ const ForManagers = () => {
             );
           })}
         </div>
-        <div className=" w-4/5 flex justify-end items-center">
+        <div className="md:full lg:w-4/5 flex justify-end items-center">
           <Image src={managerImage} width={1000} />
         </div>
       </section>
@@ -288,24 +291,79 @@ const ForManagers = () => {
 const Stories = () => {
   return (
     <>
-      <h1 className="flex justify-center font-bold text-primary mb-12">COG STORIES</h1>
+      <h1 className="flex justify-center font-bold text-primary mb-12 mt-28 text-2xl">
+        COG STORIES
+      </h1>
       <section className=" flex w-2/4 m-auto justify-center mb-12">
-        <div className="flex justify-between items-center w-fill mr-20"><Image width={1000} src={biodun}/></div>
+        <div className="flex justify-between items-center w-fill mr-20">
+          <Image width={1000} src={biodun} />
+        </div>
         <div>
-       <span className="block mb-8 font-bold">Management Opertaions</span>
-   
-<span className=""> {" "}
-    “Property managers and owners are most worried about customer
-    relationship management, which includes landlords and tenants. COG
-    allows us do all of that while providing the overall best rental
-    experience."</span>
-    <div className="font-bold mt-4">
-      <span className="w-full h-2 border-r-4 border-black mr-4"></span>
-      Biodun Ayo Odeleye
-    </div>
+          <span className="block mb-8 font-bold">Management Opertaions</span>
+
+          <span className="">
+            {" "}
+            “Property managers and owners are most worried about customer
+            relationship management, which includes landlords and tenants. COG
+            allows us do all of that while providing the overall best rental
+            experience."
+          </span>
+          <div className="font-bold mt-4">
+            <span className="w-full h-2 border-r-4 border-black mr-4"></span>
+            Biodun Ayo Odeleye
+          </div>
         </div>
       </section>
     </>
   );
 };
 
+const Why = () => {
+  return (
+    <section className="flex-col justify-center m-auto text-center mt-28">
+      <h2 className="uppercase font-bold text-primary text-2xl">Why COG</h2>
+      <p className="font-bold mb-10 text-2xl mt-8">
+        We know property management is difficult - we help you deliver a better
+        rental experience.
+      </p>
+      <div className="flex justify-between w-3/5 m-auto">
+        {/* Change the width to 80% or greater */}
+        <div className="items-center">
+          <span className="flex justify-center">
+            <Image src={sliders} />
+          </span>
+          <h1 className="text-start">Full Control</h1>
+          <p className="text-start">
+            We have developed a full <br /> stack of tools to improve <br />{" "}
+            your rental experience.
+          </p>
+        </div>
+        <div>
+          <span className="flex justify-center">
+            <Image src={database} />
+          </span>
+          <h1>No hidden charges </h1>
+          <p className="border-red-500 border-2 text-start">
+            No hidden charges We charge a specific price <br /> for each specific user
+            type. <br /> Our value added services are also transparent.
+          </p>
+        </div>
+        <div>
+          <span className="flex justify-center">
+            <Image src={key} />
+          </span>
+          <h1>Resident Center</h1>
+          <p>We help you get and keep higher value clients.</p>
+        </div>
+        <div>
+          <span className="flex justify-center">
+            <Image src={database} />
+          </span>
+          <h1>Insightful Search</h1>
+          <p>We help you get access to in-class properties stress-free.</p>
+        </div>
+      </div>
+      <div>hi</div>
+    </section>
+  );
+};
