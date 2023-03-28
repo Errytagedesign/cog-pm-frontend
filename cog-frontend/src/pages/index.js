@@ -10,7 +10,7 @@ import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
 import { useState, useEffect } from "react";
 import managerImage from "../../public/assets/images/Frame 157.png";
-
+import biodun from "../../public/assets/images/biodun.png";
 export default function Home() {
   return (
     <>
@@ -26,6 +26,7 @@ export default function Home() {
       </div>
       <ForRentals />
       <ForManagers />
+      <Stories />
     </>
   );
 }
@@ -162,7 +163,6 @@ const BenefitHeader = () => {
 
 const Benefit = () => {
   console.log(benefitData);
-  // const items = benefitData.json
   const [benefits, setBenefits] = useState([]);
   const fetchBenefits = async () => {
     const response = await fetch(`/api/benefits`);
@@ -284,3 +284,28 @@ const ForManagers = () => {
     </>
   );
 };
+
+const Stories = () => {
+  return (
+    <>
+      <h1 className="flex justify-center font-bold text-primary mb-12">COG STORIES</h1>
+      <section className=" flex w-2/4 m-auto justify-center mb-12">
+        <div className="flex justify-between items-center w-fill mr-20"><Image width={1000} src={biodun}/></div>
+        <div>
+       <span className="block mb-8 font-bold">Management Opertaions</span>
+   
+<span className=""> {" "}
+    “Property managers and owners are most worried about customer
+    relationship management, which includes landlords and tenants. COG
+    allows us do all of that while providing the overall best rental
+    experience."</span>
+    <div className="font-bold mt-4">
+      <span className="w-full h-2 border-r-4 border-black mr-4"></span>
+      Biodun Ayo Odeleye
+    </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
