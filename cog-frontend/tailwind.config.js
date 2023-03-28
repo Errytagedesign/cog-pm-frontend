@@ -15,7 +15,11 @@ module.exports = {
         lighterGrey: 'rgba(247, 247, 247, 0.9)',
         rentalsColor: '#679DC0',
         managerColor: '#62909F',
-        benefitColor: '#4B4B4B'
+        benefitColor: '#4B4B4B',
+        sliderColor: '#D2F4FF',
+        databaseColor: '#E6736C',
+        keyColor: '#A69FF7',
+        searchColor: '#DFE0A5'
 
       }
     },

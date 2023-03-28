@@ -326,41 +326,41 @@ const Why = () => {
         We know property management is difficult - we help you deliver a better
         rental experience.
       </p>
-      <div className="flex justify-between w-3/5 m-auto">
+      <div className="flex justify-between w-9/12 m-auto text-start ">
         {/* Change the width to 80% or greater */}
-        <div className="items-center">
+        <div className="items-center w-1/4  pr-10">
           <span className="flex justify-center">
             <Image src={sliders} />
           </span>
-          <h1 className="text-start">Full Control</h1>
+          <h1 className="py-4 font-bold text-2xl">Full Control</h1>
           <p className="text-start">
-            We have developed a full <br /> stack of tools to improve <br />{" "}
+            We have developed a full  stack of tools to improve {" "}
             your rental experience.
           </p>
         </div>
-        <div>
+        <div className=" w-1/4 pr-10">
           <span className="flex justify-center">
             <Image src={database} />
           </span>
-          <h1>No hidden charges </h1>
-          <p className="border-red-500 border-2 text-start">
-            No hidden charges We charge a specific price <br /> for each specific user
-            type. <br /> Our value added services are also transparent.
+          <h1 className="py-4 font-bold text-2xl">No hidden charges </h1>
+          <p className="text-start">
+            No hidden charges We charge a specific price  for each specific user
+            type. Our value added services are also transparent.
           </p>
         </div>
-        <div>
+        <div className=" w-1/4 pr-10">
           <span className="flex justify-center">
             <Image src={key} />
           </span>
-          <h1>Resident Center</h1>
-          <p>We help you get and keep higher value clients.</p>
+          <h1 className="py-4 font-bold text-2xl">Resident Center</h1>
+          <p className="text-start">We help you get and keep higher value clients.</p>
         </div>
-        <div>
+        <div className=" w-1/4 pr-10">
           <span className="flex justify-center">
             <Image src={database} />
           </span>
-          <h1>Insightful Search</h1>
-          <p>We help you get access to in-class properties stress-free.</p>
+          <h1 className="py-4 font-bold text-2xl">Insightful Search</h1>
+          <p className="text-start">We help you get access to in-class properties stress-free.</p>
         </div>
       </div>
       <div>hi</div>
