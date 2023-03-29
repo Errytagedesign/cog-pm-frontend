@@ -11,8 +11,7 @@ import biodun from "../../public/assets/images/biodun.png";
 import sliders from "../../public/assets/icons/fi_sliders.png";
 import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
-import Rectangle2 from "../../public/assets/images/Rectangle 2.png";
-import Rectangle from "../../public/assets/images/Rectangle 1.png";
+import lady from "../../public/assets/images/lady.png";
 
 export default function Home() {
   return (
@@ -29,6 +28,7 @@ export default function Home() {
       <ForManagers />
       <Stories />
       <Why />
+      <Faq />
     </>
   );
 }
@@ -114,13 +114,15 @@ const Rentals = () => {
           SEARCH PROPERTIES
         </div>
       </div>
-      <div className="relative h-96 w-6/12 right-20 bottom-5">
-        <div className="h-full absolute left-20 top-10 w-full bg-black rounded-2xl"></div>
-        <div className="h-full absolute  w-full left-10 top-5 bg-green-500 rounded-2xl">
-          {/* <Image src={Rectangle2} /> */}
-        </div>
-        <div className="h-full w-full absolute bg-red-500 rounded-2xl">
-          {/* <Image src={Rectangle} /> */}
+      <div className="relative h-96 w-6/12 left-14 bottom-5">
+        <div className="h-full absolute left-10 top-10 w-8/12 bg-managerColor rounded-2xl"></div>
+        <div className="h-full absolute  w-8/12 left-6 top-5 bg-sliderColor rounded-2xl"></div>
+        <div className="h-full w-max relative left-3 overflow-hidden rounded-2xl">
+          <Image src={lady} />
+          <span className="absolute bottom-7 text-white left-4 text-xs font-light">
+            Searching for a two-bedroom apartment at Ikeja <br />{" "}
+            <span className="text-xl"> Kehinde Hassan </span>{" "}
+          </span>
         </div>
       </div>
     </section>
@@ -364,7 +366,15 @@ const Why = () => {
           </p>
         </div>
       </div>
-      <div>hi</div>
     </section>
   );
 };
+
+
+const Faq = () =>{
+  return(
+    <section className="justify-center flex mt-12">
+      <div className="font-bold text-primary">FREQUENTLY ASKED QUESTIONS</div>
+    </section>
+  )
+}
