@@ -371,27 +371,81 @@ const Why = () => {
 };
 
 const Faq = () => {
-  const [display, setDisplay] = useState(false)
-  const toggle =()=>{
-    setDisplay(!display)
-  }
+  const [display1, setDisplay1] = useState(false);
+  const [display2, setDisplay2] = useState(false);
+  const [display3, setDisplay3] = useState(false);
+  const toggle1 = () => {
+    setDisplay1(!display1);
+  };
+  const toggle2 = () => {
+    setDisplay2(!display2);
+  };
+  const toggle3 = () => {
+    setDisplay3(!display3);
+  };
   return (
-    <section className="mt-12">
+    <section className="my-12">
       <div className="flex justify-center font-bold text-primary mb-8">
         FREQUENTLY ASKED QUESTIONS
       </div>
-      <div>
-        <div className=" flex justify-center">
-          <div className=" w-3/4 text-center "  onClick={toggle}>
+      <div> 
+        <div className=" flex justify-center mt-4">
+          <div className=" w-3/4 text-center " onClick={toggle1}>
             <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
               What is COG Property management software and who is it for?{" "}
               <Image src={Arrow} width={20} />{" "}
             </h3>
-            {
-              display && (
-                <p>wnfjwhejf</p>
-              )
-            }
+            {display1 && (
+              <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                COG property management software facilitates the rental process
+                and experience between the renters and property a driving
+                administrators, manager and owners. Primarily, this software is
+                supposed to make the process of renting a property easier for
+                both parties covering sales and branding. Then, it digitizes and
+                automates the rental experience management for both parties.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className=" flex justify-center mt-4">
+          <div className=" w-3/4 text-center " onClick={toggle2}>
+            <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+              What is COG Property management software and who is it for?{" "}
+              <Image src={Arrow} width={20} />{" "}
+            </h3>
+            {display2 && (
+              <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                COG property management software facilitates the rental process
+                and experience between the renters and property a driving
+                administrators, manager and owners. Primarily, this software is
+                supposed to make the process of renting a property easier for
+                both parties covering sales and branding. Then, it digitizes and
+                automates the rental experience management for both parties.
+              </p>
+            )}
+          </div>
+        </div>{" "}
+        <div>
+          <div className=" flex justify-center mt-4">
+            <div className=" w-3/4 text-center " onClick={toggle3}>
+              <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+                What is COG Property management software and who is it for?{" "}
+                <Image src={Arrow} width={20} />{" "}
+              </h3>
+              {display3 && (
+                <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                  COG property management software facilitates the rental
+                  process and experience between the renters and property a
+                  driving administrators, manager and owners. Primarily, this
+                  software is supposed to make the process of renting a property
+                  easier for both parties covering sales and branding. Then, it
+                  digitizes and automates the rental experience management for
+                  both parties.
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
