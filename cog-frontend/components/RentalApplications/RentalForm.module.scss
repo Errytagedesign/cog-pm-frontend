@@ -1,5 +1,11 @@
 .apply {
   margin-bottom: 100px;
+
+  // form {
+  //   width: 70%;
+  //   margin: 0 auto;
+  // }
+
   .inputContainer {
     margin-bottom: 1em;
 
@@ -12,5 +18,60 @@
     label {
       margin-bottom: 0.5em;
     }
+  }
+}
+
+.review {
+  margin-bottom: 100px;
+  .prevData {
+    margin-bottom: 1em;
+    border-bottom: solid 1px rgb(204, 204, 204);
+    padding: 0.5em 0;
+  }
+}
+
+.payment {
+  margin-bottom: 100px;
+  aside {
+    // width: 30%;
+    border-radius: 10px;
+    margin: 2em 0;
+    border: solid 1px var(--mainColor);
+
+    div {
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    h3 {
+      color: #000;
+    }
+  }
+}
+
+.complete {
+  margin-bottom: 100px;
+
+  // width: 100%;
+  aside {
+    // width: 30%;
+    border-radius: 10px;
+    margin: 2em 0;
+    border: solid 1px var(--mainColor);
+
+    div {
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    h3 {
+      color: #000;
+    }
+  }
+
+  p {
+    margin: 1em auto;
+    width: 60%;
+    text-align: center;
   }
 }

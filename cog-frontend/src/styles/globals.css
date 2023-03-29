@@ -32,6 +32,11 @@ body {
   background-color: var(--green) !important;
 }
 
+.go2392553372 {
+  /* margin: 0 auto; */
+  justify-content: center;
+}
+
 li.go2335061104::before {
   color: var(--green);
   border: solid 1px var(--green);
@@ -47,4 +52,9 @@ li.go2335061104::before {
   background: #386a8b;
   border-radius: 4px;
   padding: 1em 2em;
+  color: var(--white);
+}
+
+.mainColor {
+  color: var(--mainColor);
 }

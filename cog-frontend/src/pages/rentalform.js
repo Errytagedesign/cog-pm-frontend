@@ -1,5 +1,6 @@
-import React, { Children } from "react";
+import React, { useState } from "react";
 import MultiStep from "react-multistep";
+import Product from "../../components/Product/Product";
 import Apply from "../../components/RentalApplications/Apply";
 import Complete from "../../components/RentalApplications/Complete";
 import Payment from "../../components/RentalApplications/Payment";
@@ -7,16 +8,38 @@ import Review from "../../components/RentalApplications/Review";
 
 import styles from "../styles/RentalStyle.module.scss";
 
-export default function rentalForm() {
+export default function RentalForm() {
+  const InistialState = {
+    applicationType: "",
+    applicantName: "",
+    enterpriseSector: "",
+    applicantNumber: "",
+    applicantDate: "",
+    contactPerson: "",
+    purposeOfRent: "",
+    jobTitle: "",
+    numofPeopleWithAcess: "",
+    vehicleNumber: "",
+    vehicleClass: "",
+    moveIndate: "",
+    inspectDate: "",
+  };
+
+  const [data, setData] = useState(InistialState);
+
   const formSteps = [
-    { title: "Apply", component: <Apply /> },
-    { title: "Review", component: <Review /> },
-    { title: "Payment", component: <Payment /> },
-    { title: "Complete", component: <Complete /> },
+    { title: "Apply", component: <Apply data={data} setData={setData} /> },
+    { title: "Review", component: <Review data={data} setData={setData} /> },
+    { title: "Payment", component: <Payment data={data} setData={setData} /> },
+    {
+      title: "Complete",
+      component: <Complete data={data} setData={setData} />,
+    },
   ];
   return (
     <main className={`${styles.container}`}>
       <h2> Rental application</h2>
+      {/* <Product /> */}
       <section className={`${styles.formContainer}`}>
         <MultiStep
           //   className={`${styles.formsteps}`}

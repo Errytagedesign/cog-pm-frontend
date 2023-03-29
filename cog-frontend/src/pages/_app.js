@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import Layout from "../../components/Layout/Layout";
 
 import localFont from "next/font/local";
+import { wrapper } from "../stores/store";
+import { Provider } from "react-redux";
 
 const myFont = localFont({
   src: [
@@ -58,10 +60,12 @@ const myFont = localFont({
   ],
 });
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <Layout className={myFont.className}>
       <Component {...pageProps} />
     </Layout>
   );
-}
+};
+
+export default wrapper.withRedux(App);
