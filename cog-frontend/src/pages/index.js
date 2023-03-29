@@ -371,14 +371,10 @@ const Why = () => {
 };
 
 const Faq = () => {
-  const faq = useRef(null)
-  const toggle = () => {
-    if(faq.classList.includes('hidden')){
-      faq.classList.remove('hidden')
-  }else{
-      faq.classList.add('hidden')
+  const [display, setDisplay] = useState(false)
+  const toggle =()=>{
+    setDisplay(!display)
   }
-  };
   return (
     <section className="mt-12">
       <div className="flex justify-center font-bold text-primary mb-8">
@@ -391,7 +387,11 @@ const Faq = () => {
               What is COG Property management software and who is it for?{" "}
               <Image src={Arrow} width={20} />{" "}
             </h3>
-            <p className="hidden" ref={faq} >wnfjwhejf</p>
+            {
+              display && (
+                <p>wnfjwhejf</p>
+              )
+            }
           </div>
         </div>
       </div>
