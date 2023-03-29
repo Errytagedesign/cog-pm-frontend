@@ -1,3 +1,4 @@
+
 import Navbar from "../../components/navbar";
 import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
@@ -13,9 +14,11 @@ import sliders from "../../public/assets/icons/fi_sliders.png";
 import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
 
+
 export default function Home() {
   return (
     <>
+
       <Navbar />
       <hr className="my-2 border-1 border-hr" />
       <Header />
@@ -30,6 +33,7 @@ export default function Home() {
       <ForManagers />
       <Stories />
       <Why />
+
     </>
   );
 }
