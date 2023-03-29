@@ -5,14 +5,14 @@ import Location from "../../public/assets/icons/Location.png";
 import Image8 from "../../public/assets/images/image 8.png";
 import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import managerImage from "../../public/assets/images/Frame 157.png";
 import biodun from "../../public/assets/images/biodun.png";
 import sliders from "../../public/assets/icons/fi_sliders.png";
 import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
 import lady from "../../public/assets/images/lady.png";
-
+import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
 export default function Home() {
   return (
     <>
@@ -370,11 +370,31 @@ const Why = () => {
   );
 };
 
-
-const Faq = () =>{
-  return(
-    <section className="justify-center flex mt-12">
-      <div className="font-bold text-primary">FREQUENTLY ASKED QUESTIONS</div>
+const Faq = () => {
+  const faq = useRef(null)
+  const toggle = () => {
+    if(faq.classList.includes('hidden')){
+      faq.classList.remove('hidden')
+  }else{
+      faq.classList.add('hidden')
+  }
+  };
+  return (
+    <section className="mt-12">
+      <div className="flex justify-center font-bold text-primary mb-8">
+        FREQUENTLY ASKED QUESTIONS
+      </div>
+      <div>
+        <div className=" flex justify-center">
+          <div className=" w-3/4 text-center "  onClick={toggle}>
+            <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+              What is COG Property management software and who is it for?{" "}
+              <Image src={Arrow} width={20} />{" "}
+            </h3>
+            <p className="hidden" ref={faq} >wnfjwhejf</p>
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
