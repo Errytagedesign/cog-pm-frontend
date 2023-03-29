@@ -1,5 +1,3 @@
-
-import Navbar from "../../components/navbar";
 import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
 import stroke from "../../public/assets/icons/Stroke 1.png";
@@ -13,14 +11,12 @@ import biodun from "../../public/assets/images/biodun.png";
 import sliders from "../../public/assets/icons/fi_sliders.png";
 import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
-
+import Rectangle2 from "../../public/assets/images/Rectangle 2.png";
+import Rectangle from "../../public/assets/images/Rectangle 1.png";
 
 export default function Home() {
   return (
     <>
-
-      <Navbar />
-      <hr className="my-2 border-1 border-hr" />
       <Header />
       <Seacrh />
       <Rentals />
@@ -33,7 +29,6 @@ export default function Home() {
       <ForManagers />
       <Stories />
       <Why />
-
     </>
   );
 }
@@ -119,16 +114,14 @@ const Rentals = () => {
           SEARCH PROPERTIES
         </div>
       </div>
-      <div className=" flex">
-        {/* <div className="relative top-10 left-10 ">
-          <Image src={Rectangle} height={1000} />
+      <div className="relative h-96 w-6/12 right-20 bottom-5">
+        <div className="h-full absolute left-20 top-10 w-full bg-black rounded-2xl"></div>
+        <div className="h-full absolute  w-full left-10 top-5 bg-green-500 rounded-2xl">
+          {/* <Image src={Rectangle2} /> */}
         </div>
-        <div className="absolute top-8 left-8">
-          <Image src={Rectangle2} />
+        <div className="h-full w-full absolute bg-red-500 rounded-2xl">
+          {/* <Image src={Rectangle} /> */}
         </div>
-        <div className="relative top-3 left-20">
-          <Image src={Rectangle} />
-        </div> */}
       </div>
     </section>
   );
@@ -330,7 +323,7 @@ const Why = () => {
         We know property management is difficult - we help you deliver a better
         rental experience.
       </p>
-      <div className="flex justify-between w-9/12 m-auto text-start ">
+      <div className="flex justify-between w-5/6 m-auto text-start ">
         {/* Change the width to 80% or greater */}
         <div className="items-center w-1/4  pr-10">
           <span className="flex justify-center bg-sliderColor w-max p-8 rounded-2xl m-auto">
@@ -338,8 +331,8 @@ const Why = () => {
           </span>
           <h1 className="py-4 font-bold text-2xl">Full Control</h1>
           <p className="text-start text-xs font-bold font-medium">
-            We have developed a full  stack of tools to improve {" "}
-            your rental experience.
+            We have developed a full stack of tools to improve your rental
+            experience.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
@@ -348,7 +341,7 @@ const Why = () => {
           </span>
           <h1 className="py-4 font-bold text-2xl">No hidden charges </h1>
           <p className="text-start text-xs font-bold font-medium">
-            No hidden charges We charge a specific price  for each specific user
+            No hidden charges We charge a specific price for each specific user
             type. Our value added services are also transparent.
           </p>
         </div>
@@ -357,14 +350,18 @@ const Why = () => {
             <Image src={key} />
           </span>
           <h1 className="py-4 font-bold text-2xl">Resident Center</h1>
-          <p className="text-start text-xs font-bold font-medium">We help you get and keep higher value clients.</p>
+          <p className="text-start text-xs font-bold font-medium">
+            We help you get and keep higher value clients.
+          </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-searchColor w-max p-8 rounded-2xl m-auto">
             <Image src={database} />
           </span>
           <h1 className="py-4 font-bold text-2xl">Insightful Search</h1>
-          <p className="text-start text-xs font-bold font-medium">We help you get access to in-class properties stress-free.</p>
+          <p className="text-start text-xs font-bold font-medium">
+            We help you get access to in-class properties stress-free.
+          </p>
         </div>
       </div>
       <div>hi</div>
