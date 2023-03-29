@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --mainColor: #386a8b;
   --black: #000000;
@@ -58,3 +59,4 @@ li.go2335061104::before {
 .mainColor {
   color: var(--mainColor);
 }
+

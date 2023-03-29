@@ -3,9 +3,11 @@ import Link from "next/link";
 import logo1 from "../public/assets/icons/COG Logo.png";
 const Navbar = () => {
   return (
+
     <header className="border-b-4">
       <nav className=" mb-5  border-hr flex justify-between px-24 items-center">
         <Link href="/">
+
           <Image src={logo1} alt="Cog Logo" />
         </Link>
         <div className="w-3/6">
