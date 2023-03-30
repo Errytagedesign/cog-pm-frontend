@@ -1,0 +1,36 @@
+.product {
+  // width: 80%;
+  margin: 2em auto;
+  .property {
+    border: solid 1px #b1b1b4;
+    box-shadow: 0px 8px 8px 0px #0000002e;
+    padding: 1em;
+    border-radius: 10px;
+    width: 65%;
+    margin: 2em 0;
+    .ImageContainer {
+      width: 155px;
+      // height: 155px;
+    }
+  }
+  small {
+    color: #4b4b4b;
+    font-size: 0.6rem;
+  }
+
+  aside {
+    width: 30%;
+    border-radius: 10px;
+    margin: 2em 0;
+    border: solid 1px var(--mainColor);
+
+    div {
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+
+    h3 {
+      color: #000;
+    }
+  }
+}
