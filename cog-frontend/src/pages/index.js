@@ -13,6 +13,7 @@ import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
 import lady from "../../public/assets/images/lady.png";
 import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
+import Footer from "../../components/footer";
 export default function Home() {
   return (
     <>
@@ -29,6 +30,7 @@ export default function Home() {
       <Stories />
       <Why />
       <Faq />
+      <Footer />
     </>
   );
 }
@@ -70,7 +72,7 @@ const Seacrh = () => {
           />
         </div>
         <div
-          className="bg-primary text-white px-5 py-2 rounded-r"
+          className="bg-primary text-white px-5 py-2 rounded-r cursor-pointer"
           onClick={handleClick}
         >
           Submit
@@ -118,7 +120,7 @@ const Rentals = () => {
         <div className="h-full absolute left-10 top-10 w-8/12 bg-managerColor rounded-2xl"></div>
         <div className="h-full absolute  w-8/12 left-6 top-5 bg-sliderColor rounded-2xl"></div>
         <div className="h-full w-max relative left-3 overflow-hidden rounded-2xl">
-          <Image src={lady} />
+          <Image src={lady} alt='Lady Image' />
           <span className="absolute bottom-7 text-white left-4 text-xs font-light">
             Searching for a two-bedroom apartment at Ikeja <br />{" "}
             <span className="text-xl"> Kehinde Hassan </span>{" "}
@@ -150,7 +152,7 @@ const PropertyMangaers = () => {
         </div>
       </div>
       <div className="w-1/2 pt-12">
-        <Image src={Image8} />
+        <Image src={Image8} alt='Managers Image' />
       </div>
     </section>
   );
@@ -187,6 +189,7 @@ const Benefit = () => {
                 src={`/../public/assets/icons/${benefit.image}`}
                 width={30}
                 height={30}
+                alt='Benefit Image'
               />
             </div>
             <div className="text-2xl text-center py-4">{benefit.heading}</div>
@@ -215,7 +218,7 @@ const ForRentals = () => {
       </div>
       <section className="flex w-full justify-center m-auto">
         <div className=" w-1/2 flex justify-end items-center">
-          <Image src={iPhone} width={330} />
+          <Image src={iPhone} width={330} alt="Phone Image" />
         </div>
         <div className="ml-44">
           <div className="text-3xl font-bold">
@@ -280,7 +283,7 @@ const ForManagers = () => {
           })}
         </div>
         <div className="md:full lg:w-4/5 flex justify-end items-center">
-          <Image src={managerImage} width={1000} />
+          <Image src={managerImage} width={1000} alt="Manager Image" />
         </div>
       </section>
     </>
@@ -295,7 +298,7 @@ const Stories = () => {
       </h1>
       <section className=" flex w-2/4 m-auto justify-center mb-12">
         <div className="flex justify-between items-center w-fill mr-20">
-          <Image width={1000} src={biodun} />
+          <Image width={1000} src={biodun} alt="Biodun Icon" />
         </div>
         <div>
           <span className="block mb-8 font-bold">Management Opertaions</span>
@@ -329,39 +332,39 @@ const Why = () => {
         {/* Change the width to 80% or greater */}
         <div className="items-center w-1/4  pr-10">
           <span className="flex justify-center bg-sliderColor w-max p-8 rounded-2xl m-auto">
-            <Image src={sliders} />
+            <Image src={sliders} alt="Sliders Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">Full Control</h1>
-          <p className="text-start text-xs font-bold font-medium">
+          <p className="text-start text-xs  font-medium">
             We have developed a full stack of tools to improve your rental
             experience.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-databaseColor w-max p-8 rounded-2xl m-auto">
-            <Image src={database} />
+            <Image src={database} alt="database Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">No hidden charges </h1>
-          <p className="text-start text-xs font-bold font-medium">
+          <p className="text-start text-xs  font-medium">
             No hidden charges We charge a specific price for each specific user
             type. Our value added services are also transparent.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-keyColor w-max p-8 rounded-2xl m-auto">
-            <Image src={key} />
+            <Image src={key} alt="Key Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">Resident Center</h1>
-          <p className="text-start text-xs font-bold font-medium">
+          <p className="text-start text-xs  font-medium">
             We help you get and keep higher value clients.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-searchColor w-max p-8 rounded-2xl m-auto">
-            <Image src={database} />
+            <Image src={database} alt="database Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">Insightful Search</h1>
-          <p className="text-start text-xs font-bold font-medium">
+          <p className="text-start text-xs font-medium">
             We help you get access to in-class properties stress-free.
           </p>
         </div>
@@ -388,12 +391,14 @@ const Faq = () => {
       <div className="flex justify-center font-bold text-primary mb-8">
         FREQUENTLY ASKED QUESTIONS
       </div>
-      <div> 
+      <div>
         <div className=" flex justify-center mt-4">
           <div className=" w-3/4 text-center " onClick={toggle1}>
             <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
               What is COG Property management software and who is it for?{" "}
-              <Image src={Arrow} width={20} />{" "}
+              <span className="cursor-pointer">
+                <Image src={Arrow} width={20} />{" "}
+              </span>
             </h3>
             {display1 && (
               <p className="text-start mt-6 transition-transform ease-in-out duration-300">
@@ -413,7 +418,9 @@ const Faq = () => {
           <div className=" w-3/4 text-center " onClick={toggle2}>
             <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
               What is COG Property management software and who is it for?{" "}
-              <Image src={Arrow} width={20} />{" "}
+              <span className="cursor-pointer">
+                <Image src={Arrow} width={20} />{" "}
+              </span>
             </h3>
             {display2 && (
               <p className="text-start mt-6 transition-transform ease-in-out duration-300">
@@ -432,7 +439,9 @@ const Faq = () => {
             <div className=" w-3/4 text-center " onClick={toggle3}>
               <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
                 What is COG Property management software and who is it for?{" "}
-                <Image src={Arrow} width={20} />{" "}
+                <span className="cursor-pointer">
+                  <Image src={Arrow} width={20} />{" "}
+                </span>
               </h3>
               {display3 && (
                 <p className="text-start mt-6 transition-transform ease-in-out duration-300">
