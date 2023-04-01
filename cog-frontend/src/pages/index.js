@@ -5,7 +5,7 @@ import Location from "../../public/assets/icons/Location.png";
 import Image8 from "../../public/assets/images/image 8.png";
 import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import managerImage from "../../public/assets/images/Frame 157.png";
 import biodun from "../../public/assets/images/biodun.png";
 import sliders from "../../public/assets/icons/fi_sliders.png";
@@ -13,7 +13,7 @@ import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
 import lady from "../../public/assets/images/lady.png";
 import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
-import Footer from "../../components/footer";
+// import Footer from "../../components/footer";
 export default function Home() {
   return (
     <>
@@ -30,7 +30,7 @@ export default function Home() {
       <Stories />
       <Why />
       <Faq />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
@@ -57,14 +57,14 @@ const Seacrh = () => {
     <>
       <main className="flex mt-10 bg-lighterGrey lg:w-1/2 md:w-3/4 m-auto justify-between h-10 pl-2">
         <div className="w-full flex items-center">
-          <Image src={seacrh} />
+          <Image src={seacrh} alt="" />
           <input
             type="text"
             className="bg-lighterGrey h-full w-3/6 ml-2 pl-2 outline-none "
             placeholder="What property are you looking to rent?"
           />
-          <Image src={stroke} className="items-center ml-2" />
-          <Image src={Location} className="items-center ml-6 mr-4" />
+          <Image src={stroke} className="items-center ml-2" alt="" />
+          <Image src={Location} className="items-center ml-6 mr-4" alt="" />
           <input
             type="text"
             className="h-full bg-lighterGrey w-28 pl-2 outline-none"
@@ -120,7 +120,7 @@ const Rentals = () => {
         <div className="h-full absolute left-10 top-10 w-8/12 bg-managerColor rounded-2xl"></div>
         <div className="h-full absolute  w-8/12 left-6 top-5 bg-sliderColor rounded-2xl"></div>
         <div className="h-full w-max relative left-3 overflow-hidden rounded-2xl">
-          <Image src={lady} alt='Lady Image' />
+          <Image src={lady} alt="Lady Image" />
           <span className="absolute bottom-7 text-white left-4 text-xs font-light">
             Searching for a two-bedroom apartment at Ikeja <br />{" "}
             <span className="text-xl"> Kehinde Hassan </span>{" "}
@@ -152,7 +152,7 @@ const PropertyMangaers = () => {
         </div>
       </div>
       <div className="w-1/2 pt-12">
-        <Image src={Image8} alt='Managers Image' />
+        <Image src={Image8} alt="Managers Image" />
       </div>
     </section>
   );
@@ -189,7 +189,7 @@ const Benefit = () => {
                 src={`/../public/assets/icons/${benefit.image}`}
                 width={30}
                 height={30}
-                alt='Benefit Image'
+                alt="Benefit Image"
               />
             </div>
             <div className="text-2xl text-center py-4">{benefit.heading}</div>
@@ -304,11 +304,10 @@ const Stories = () => {
           <span className="block mb-8 font-bold">Management Opertaions</span>
 
           <span className="">
-            {" "}
-            “Property managers and owners are most worried about customer
+            Property managers and owners are most worried about customer
             relationship management, which includes landlords and tenants. COG
             allows us do all of that while providing the overall best rental
-            experience."
+            experience.
           </span>
           <div className="font-bold mt-4">
             <span className="w-full h-2 border-r-4 border-black mr-4"></span>
@@ -397,7 +396,7 @@ const Faq = () => {
             <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
               What is COG Property management software and who is it for?{" "}
               <span className="cursor-pointer">
-                <Image src={Arrow} width={20} />{" "}
+                <Image src={Arrow} width={20} alt="" />{" "}
               </span>
             </h3>
             {display1 && (
@@ -419,7 +418,7 @@ const Faq = () => {
             <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
               What is COG Property management software and who is it for?{" "}
               <span className="cursor-pointer">
-                <Image src={Arrow} width={20} />{" "}
+                <Image src={Arrow} width={20} alt="" />{" "}
               </span>
             </h3>
             {display2 && (
@@ -440,7 +439,7 @@ const Faq = () => {
               <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
                 What is COG Property management software and who is it for?{" "}
                 <span className="cursor-pointer">
-                  <Image src={Arrow} width={20} />{" "}
+                  <Image src={Arrow} width={20} alt="" />{" "}
                 </span>
               </h3>
               {display3 && (

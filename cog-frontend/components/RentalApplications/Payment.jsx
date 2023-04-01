@@ -11,7 +11,7 @@ function Payment() {
           <h3> $40:00 </h3>
         </div>
       </aside>
-      <button className="main-btn"> Proceed to submit application</button>
+      <button className="main-btn"> Proceed to application fee payment</button>
     </div>
   );
 }
