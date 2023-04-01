@@ -34,7 +34,7 @@ function Apply({ data, setData }) {
     <div className={`${styles.apply}  `}>
       <Product />
 
-      <form>
+      <form className="flex flex-col justify-center">
         <div className={`${styles.inputContainer} flex flex-col  `}>
           <label htmlFor="Application Type"> Application Type</label>
 
