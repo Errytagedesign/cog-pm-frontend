@@ -1,5 +1,3 @@
-
-import Navbar from "../../components/navbar";
 import Image from "next/image";
 import seacrh from "../../public/assets/icons/Search.png";
 import stroke from "../../public/assets/icons/Stroke 1.png";
@@ -7,20 +5,18 @@ import Location from "../../public/assets/icons/Location.png";
 import Image8 from "../../public/assets/images/image 8.png";
 import iPhone from "../../public/assets/images/iPhone.png";
 import benefitData from "../../Data/benefit.js";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import managerImage from "../../public/assets/images/Frame 157.png";
 import biodun from "../../public/assets/images/biodun.png";
 import sliders from "../../public/assets/icons/fi_sliders.png";
 import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
-
-
+import lady from "../../public/assets/images/lady.png";
+import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
+import Footer from "../../components/footer";
 export default function Home() {
   return (
     <>
-
-      <Navbar />
-      <hr className="my-2 border-1 border-hr" />
       <Header />
       <Seacrh />
       <Rentals />
@@ -33,7 +29,8 @@ export default function Home() {
       <ForManagers />
       <Stories />
       <Why />
-
+      <Faq />
+      <Footer />
     </>
   );
 }
@@ -75,7 +72,7 @@ const Seacrh = () => {
           />
         </div>
         <div
-          className="bg-primary text-white px-5 py-2 rounded-r"
+          className="bg-primary text-white px-5 py-2 rounded-r cursor-pointer"
           onClick={handleClick}
         >
           Submit
@@ -119,16 +116,16 @@ const Rentals = () => {
           SEARCH PROPERTIES
         </div>
       </div>
-      <div className=" flex">
-        {/* <div className="relative top-10 left-10 ">
-          <Image src={Rectangle} height={1000} />
+      <div className="relative h-96 w-6/12 left-14 bottom-5">
+        <div className="h-full absolute left-10 top-10 w-8/12 bg-managerColor rounded-2xl"></div>
+        <div className="h-full absolute  w-8/12 left-6 top-5 bg-sliderColor rounded-2xl"></div>
+        <div className="h-full w-max relative left-3 overflow-hidden rounded-2xl">
+          <Image src={lady} alt='Lady Image' />
+          <span className="absolute bottom-7 text-white left-4 text-xs font-light">
+            Searching for a two-bedroom apartment at Ikeja <br />{" "}
+            <span className="text-xl"> Kehinde Hassan </span>{" "}
+          </span>
         </div>
-        <div className="absolute top-8 left-8">
-          <Image src={Rectangle2} />
-        </div>
-        <div className="relative top-3 left-20">
-          <Image src={Rectangle} />
-        </div> */}
       </div>
     </section>
   );
@@ -155,7 +152,7 @@ const PropertyMangaers = () => {
         </div>
       </div>
       <div className="w-1/2 pt-12">
-        <Image src={Image8} />
+        <Image src={Image8} alt='Managers Image' />
       </div>
     </section>
   );
@@ -192,6 +189,7 @@ const Benefit = () => {
                 src={`/../public/assets/icons/${benefit.image}`}
                 width={30}
                 height={30}
+                alt='Benefit Image'
               />
             </div>
             <div className="text-2xl text-center py-4">{benefit.heading}</div>
@@ -220,7 +218,7 @@ const ForRentals = () => {
       </div>
       <section className="flex w-full justify-center m-auto">
         <div className=" w-1/2 flex justify-end items-center">
-          <Image src={iPhone} width={330} />
+          <Image src={iPhone} width={330} alt="Phone Image" />
         </div>
         <div className="ml-44">
           <div className="text-3xl font-bold">
@@ -285,7 +283,7 @@ const ForManagers = () => {
           })}
         </div>
         <div className="md:full lg:w-4/5 flex justify-end items-center">
-          <Image src={managerImage} width={1000} />
+          <Image src={managerImage} width={1000} alt="Manager Image" />
         </div>
       </section>
     </>
@@ -300,7 +298,7 @@ const Stories = () => {
       </h1>
       <section className=" flex w-2/4 m-auto justify-center mb-12">
         <div className="flex justify-between items-center w-fill mr-20">
-          <Image width={1000} src={biodun} />
+          <Image width={1000} src={biodun} alt="Biodun Icon" />
         </div>
         <div>
           <span className="block mb-8 font-bold">Management Opertaions</span>
@@ -330,44 +328,136 @@ const Why = () => {
         We know property management is difficult - we help you deliver a better
         rental experience.
       </p>
-      <div className="flex justify-between w-9/12 m-auto text-start ">
+      <div className="flex justify-between w-5/6 m-auto text-start ">
         {/* Change the width to 80% or greater */}
         <div className="items-center w-1/4  pr-10">
           <span className="flex justify-center bg-sliderColor w-max p-8 rounded-2xl m-auto">
-            <Image src={sliders} />
+            <Image src={sliders} alt="Sliders Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">Full Control</h1>
-          <p className="text-start text-xs font-bold font-medium">
-            We have developed a full  stack of tools to improve {" "}
-            your rental experience.
+          <p className="text-start text-xs  font-medium">
+            We have developed a full stack of tools to improve your rental
+            experience.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-databaseColor w-max p-8 rounded-2xl m-auto">
-            <Image src={database} />
+            <Image src={database} alt="database Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">No hidden charges </h1>
-          <p className="text-start text-xs font-bold font-medium">
-            No hidden charges We charge a specific price  for each specific user
+          <p className="text-start text-xs  font-medium">
+            No hidden charges We charge a specific price for each specific user
             type. Our value added services are also transparent.
           </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-keyColor w-max p-8 rounded-2xl m-auto">
-            <Image src={key} />
+            <Image src={key} alt="Key Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">Resident Center</h1>
-          <p className="text-start text-xs font-bold font-medium">We help you get and keep higher value clients.</p>
+          <p className="text-start text-xs  font-medium">
+            We help you get and keep higher value clients.
+          </p>
         </div>
         <div className=" w-1/4 pr-10">
           <span className="flex justify-center bg-searchColor w-max p-8 rounded-2xl m-auto">
-            <Image src={database} />
+            <Image src={database} alt="database Image" />
           </span>
           <h1 className="py-4 font-bold text-2xl">Insightful Search</h1>
-          <p className="text-start text-xs font-bold font-medium">We help you get access to in-class properties stress-free.</p>
+          <p className="text-start text-xs font-medium">
+            We help you get access to in-class properties stress-free.
+          </p>
         </div>
       </div>
-      <div>hi</div>
+    </section>
+  );
+};
+
+const Faq = () => {
+  const [display1, setDisplay1] = useState(false);
+  const [display2, setDisplay2] = useState(false);
+  const [display3, setDisplay3] = useState(false);
+  const toggle1 = () => {
+    setDisplay1(!display1);
+  };
+  const toggle2 = () => {
+    setDisplay2(!display2);
+  };
+  const toggle3 = () => {
+    setDisplay3(!display3);
+  };
+  return (
+    <section className="my-12">
+      <div className="flex justify-center font-bold text-primary mb-8">
+        FREQUENTLY ASKED QUESTIONS
+      </div>
+      <div>
+        <div className=" flex justify-center mt-4">
+          <div className=" w-3/4 text-center " onClick={toggle1}>
+            <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+              What is COG Property management software and who is it for?{" "}
+              <span className="cursor-pointer">
+                <Image src={Arrow} width={20} />{" "}
+              </span>
+            </h3>
+            {display1 && (
+              <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                COG property management software facilitates the rental process
+                and experience between the renters and property a driving
+                administrators, manager and owners. Primarily, this software is
+                supposed to make the process of renting a property easier for
+                both parties covering sales and branding. Then, it digitizes and
+                automates the rental experience management for both parties.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className=" flex justify-center mt-4">
+          <div className=" w-3/4 text-center " onClick={toggle2}>
+            <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+              What is COG Property management software and who is it for?{" "}
+              <span className="cursor-pointer">
+                <Image src={Arrow} width={20} />{" "}
+              </span>
+            </h3>
+            {display2 && (
+              <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                COG property management software facilitates the rental process
+                and experience between the renters and property a driving
+                administrators, manager and owners. Primarily, this software is
+                supposed to make the process of renting a property easier for
+                both parties covering sales and branding. Then, it digitizes and
+                automates the rental experience management for both parties.
+              </p>
+            )}
+          </div>
+        </div>{" "}
+        <div>
+          <div className=" flex justify-center mt-4">
+            <div className=" w-3/4 text-center " onClick={toggle3}>
+              <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+                What is COG Property management software and who is it for?{" "}
+                <span className="cursor-pointer">
+                  <Image src={Arrow} width={20} />{" "}
+                </span>
+              </h3>
+              {display3 && (
+                <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                  COG property management software facilitates the rental
+                  process and experience between the renters and property a
+                  driving administrators, manager and owners. Primarily, this
+                  software is supposed to make the process of renting a property
+                  easier for both parties covering sales and branding. Then, it
+                  digitizes and automates the rental experience management for
+                  both parties.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
