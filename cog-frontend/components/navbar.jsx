@@ -10,18 +10,18 @@ const Navbar = () => {
         </Link>
         <div className="w-3/6">
           <ul className="flex justify-between ">
-            <Link to="/" className="px-4 cursor-pointer">
+            <Link href="/" className="px-4 cursor-pointer">
               Home
             </Link>
-            <Link to="forrentals">For rentals</Link>
-            <Link to="managers">For property managers/owners</Link>
+            <Link href="/forrentals">For rentals</Link>
+            <Link href="/managers">For property managers/owners</Link>
           </ul>
         </div>
         <div className="w-48">
           <ul className="flex justify-between items-center">
-            <Link to="/about">About us</Link>
+            <Link href="/about">About us</Link>
             <Link
-              to="signin"
+              href="/signin"
               className="bg-primary text-white px-5 py-2 rounded cursor-pointer"
             >
               Sign in

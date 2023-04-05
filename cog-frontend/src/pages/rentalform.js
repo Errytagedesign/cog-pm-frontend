@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MultiStep from "react-multistep";
-import Product from "../../components/Product/Product";
+// import Product from "../../components/Product/Product";
 import Apply from "../../components/RentalApplications/Apply";
 import Complete from "../../components/RentalApplications/Complete";
 import Payment from "../../components/RentalApplications/Payment";
