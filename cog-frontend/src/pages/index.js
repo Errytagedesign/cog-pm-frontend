@@ -16,7 +16,7 @@ import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
 // import Footer from "../../components/footer";
 export default function Home() {
   return (
-    <>
+    <main className="font-Euclid">
       <Header />
       <Seacrh />
       <Rentals />
@@ -31,19 +31,19 @@ export default function Home() {
       <Why />
       <Faq />
       {/* <Footer /> */}
-    </>
+    </main>
   );
 }
 
 const Header = () => {
   return (
     <header className="flex-col justify-center text-center">
-      <h1 className="flex justify-center text-center text-primary mt-36 mb-2 text-4xl">
-        The property rental process and <br /> experience just got better
+      <h1 className="flex justify-center text-center text-primary mt-36 mb-2 text-4xl font-bold">
+        The property rental and sales <br /> experience just got better
       </h1>
       <small className="text-xs leading-snug text-lightGrey">
-        Either you are a real estate renter, owner or manager, we make <br />{" "}
-        your operations seamless.
+        Either you are a real estate renter, buyer or manager, we make <br /> your
+        operations seamless.
       </small>
     </header>
   );
@@ -61,7 +61,7 @@ const Seacrh = () => {
           <input
             type="text"
             className="bg-lighterGrey h-full w-3/6 ml-2 pl-2 outline-none "
-            placeholder="What property are you looking to rent?"
+            placeholder="What property type are you looking for?"
           />
           <Image src={stroke} className="items-center ml-2" alt="" />
           <Image src={Location} className="items-center ml-6 mr-4" alt="" />
