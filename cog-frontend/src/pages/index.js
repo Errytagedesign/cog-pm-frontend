@@ -16,7 +16,7 @@ import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
 // import Footer from "../../components/footer";
 export default function Home() {
   return (
-    <>
+    <main className="font-Euclid">
       <Header />
       <Seacrh />
       <Rentals />
@@ -31,19 +31,19 @@ export default function Home() {
       <Why />
       <Faq />
       {/* <Footer /> */}
-    </>
+    </main>
   );
 }
 
 const Header = () => {
   return (
     <header className="flex-col justify-center text-center">
-      <h1 className="flex justify-center text-center text-primary mt-36 mb-2 text-4xl">
-        The property rental process and <br /> experience just got better
+      <h1 className="flex justify-center text-center text-primary mt-36 mb-2 text-4xl font-bold">
+        The property rental and sales <br /> experience just got better
       </h1>
       <small className="text-xs leading-snug text-lightGrey">
-        Either you are a real estate renter, owner or manager, we make <br />{" "}
-        your operations seamless.
+        Either you are a real estate renter, buyer or manager, we make <br /> your
+        operations seamless.
       </small>
     </header>
   );
@@ -61,7 +61,7 @@ const Seacrh = () => {
           <input
             type="text"
             className="bg-lighterGrey h-full w-3/6 ml-2 pl-2 outline-none "
-            placeholder="What property are you looking to rent?"
+            placeholder="What property type are you looking for?"
           />
           <Image src={stroke} className="items-center ml-2" alt="" />
           <Image src={Location} className="items-center ml-6 mr-4" alt="" />
@@ -103,7 +103,7 @@ const Rentals = () => {
     <section className="flex justify-between py-8 px-8 h-max bg-rentalsColor w-4/5 m-auto my-12 relative rounded">
       <div className="flex-col">
         <div className="bg-primary w-max py-2 px-6 rounded-2xl text-white text-xs">
-          For rentals
+          For renters and buyers
         </div>
         <div className="text-white text-2xl pt-6">
           Access to diverse properties <br /> for free.
@@ -376,6 +376,7 @@ const Faq = () => {
   const [display1, setDisplay1] = useState(false);
   const [display2, setDisplay2] = useState(false);
   const [display3, setDisplay3] = useState(false);
+  const [display4, setDisplay4] = useState(false);
   const toggle1 = () => {
     setDisplay1(!display1);
   };
@@ -384,6 +385,9 @@ const Faq = () => {
   };
   const toggle3 = () => {
     setDisplay3(!display3);
+  };
+  const toggle4 = () => {
+    setDisplay4(!display4);
   };
   return (
     <section className="my-12">
@@ -416,19 +420,19 @@ const Faq = () => {
         <div className=" flex justify-center mt-4">
           <div className=" w-3/4 text-center " onClick={toggle2}>
             <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
-              What is COG Property management software and who is it for?{" "}
+              Pricing and services
               <span className="cursor-pointer">
                 <Image src={Arrow} width={20} alt="" />{" "}
               </span>
             </h3>
             {display2 && (
               <p className="text-start mt-6 transition-transform ease-in-out duration-300">
-                COG property management software facilitates the rental process
-                and experience between the renters and property a driving
-                administrators, manager and owners. Primarily, this software is
-                supposed to make the process of renting a property easier for
-                both parties covering sales and branding. Then, it digitizes and
-                automates the rental experience management for both parties.
+                COG helps you list your homes and helps you boost your outreach
+                and brand thorugh a website page. Your property and business
+                operations of rent, maintenance, services, schedules etc can be
+                automated for you. Subsequently, we are offering vendor
+                recommendations to COG vetted service providers to outsource
+                your facility management.
               </p>
             )}
           </div>
@@ -437,20 +441,42 @@ const Faq = () => {
           <div className=" flex justify-center mt-4">
             <div className=" w-3/4 text-center " onClick={toggle3}>
               <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
-                What is COG Property management software and who is it for?{" "}
+                Legal statement
                 <span className="cursor-pointer">
                   <Image src={Arrow} width={20} alt="" />{" "}
                 </span>
               </h3>
               {display3 && (
                 <p className="text-start mt-6 transition-transform ease-in-out duration-300">
-                  COG property management software facilitates the rental
-                  process and experience between the renters and property a
-                  driving administrators, manager and owners. Primarily, this
-                  software is supposed to make the process of renting a property
-                  easier for both parties covering sales and branding. Then, it
-                  digitizes and automates the rental experience management for
-                  both parties.
+                  COG primarily provides software tht helps you run your
+                  business more efficiently, with less oversight. You are to use
+                  this software as you would other business software. COG cannot
+                  get sued for its services but would seek other channels of
+                  conflict resolution, especially those related to work output.
+                  Also, when a client purchases materials independently (i.e.
+                  not from COG Technical services),the client is liable to any
+                  unintended implications derived from the standard of that
+                  material
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className=" flex justify-center mt-4">
+            <div className=" w-3/4 text-center " onClick={toggle4}>
+              <h3 className="flex bg-primary px-12 py-2 rounded justify-between items-center text-center text-white">
+                Bank accounts
+                <span className="cursor-pointer">
+                  <Image src={Arrow} width={20} alt="" />{" "}
+                </span>
+              </h3>
+              {display4 && (
+                <p className="text-start mt-6 transition-transform ease-in-out duration-300">
+                  We provide virtual bank accounts wih your business name to
+                  make the operability for inflows and outflows serve you
+                  better. COG allows you receive rent from your tenants,pay your
+                  vendors and employees.
                 </p>
               )}
             </div>

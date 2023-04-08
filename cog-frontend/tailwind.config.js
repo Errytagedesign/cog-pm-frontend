@@ -21,6 +21,9 @@ module.exports = {
         keyColor: '#A69FF7',
         searchColor: '#DFE0A5'
 
+      },
+      fontFamily:{
+        euclid: "Euclid"
       }
     },
   },
