@@ -6,7 +6,7 @@ import facebook from "../public/assets/icons/facebook.png";
 import email from "../public/assets/icons/email.png";
 const Footer = () => {
   return (
-    <section className=" justify-between  m-auto w-full bg-primary text-white">
+    <section className=" justify-between  m-auto w-full bg-primary text-white fixed bottom-0">
       <div className="w-3/4 flex justify-between m-auto py-8">
         <div className="">
           <div className="cursor-pointer">About Us</div>
