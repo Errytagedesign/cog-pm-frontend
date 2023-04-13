@@ -1,16 +1,21 @@
 {
-
-"properties" : [
+  "properties": [
     {
       "id": 1,
       "image": "property.png",
       "address": "22, Awolo road, ikeja",
       "city": "Lagos. 100001",
       "name": "2 Bed l 1 Bath l 2000 sqft",
-      "descriptionn":
-        "This popaaszerty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "descriptionn": "This popaaszerty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
-      "available": "Available Dec 1"
+      "available": "Available Dec 1",
+      "location": [
+        {
+          "city": "Ikorodu Property ",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co."
     },
     {
       "id": 2,
@@ -18,10 +23,16 @@
       "address": "22, Awolo road, ikeja",
       "city": "Lagos. 100001",
       "name": "2 Bed l 1 Bath l 2000 sqft",
-      "descriptionn":
-        "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
-      "available": "Available Dec 1"
+      "available": "Available Dec 1",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co."
     },
     {
       "id": 3,
@@ -29,10 +40,16 @@
       "address": "22, Awolo road, ikeja",
       "city": "Lagos. 100001",
       "name": "2 Bed l 1 Bath l 2000 sqft",
-      "descriptionn":
-        "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
-      "available": "Available Dec 1"
+      "available": "Available Dec 1",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co."
     },
     {
       "id": 4,
@@ -40,10 +57,16 @@
       "address": "22, Awolo road, ikeja",
       "city": "Lagos. 100001",
       "name": "2 Bed l 1 Bath l 2000 sqft",
-      "descriptionn":
-        "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
-      "available": "Available Dec 1"
+      "available": "Available Dec 1",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co."
     },
     {
       "id": 5,
@@ -51,10 +74,16 @@
       "address": "22, Awolo road, ikeja",
       "city": "Lagos. 100001",
       "name": "2 Bed l 1 Bath l 2000 sqft",
-      "descriptionn":
-        "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
-      "available": "Available Dec 1"
+      "available": "Available Dec 1",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co."
     },
     {
       "id": 6,
@@ -62,10 +91,16 @@
       "address": "22, Awolo road, ikeja",
       "city": "Lagos. 100001",
       "name": "2 Bed l 1 Bath l 2000 sqft",
-      "descriptionn":
-        "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
-      "available": "Available Dec 1"
+      "available": "Available Dec 1",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co."
     }
   ]
-}  
+}
