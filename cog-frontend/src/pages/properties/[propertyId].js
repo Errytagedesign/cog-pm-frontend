@@ -6,10 +6,10 @@ const Property = ({ property }) => {
     //   {property.id} {property.name} {property.descriptionn}
     // </div>
     <section>
-      <div className="flex justify-between w-3/4 m-auto border-2 border-red-500">
+      <div className="flex justify-between w-3/4 m-auto relative">
         <div>{property.location[0].city}<p>{property.location[0].address}</p></div>
-        <div className="text-"> Listed By : <Link href="#">{property.owner}</Link></div>
-        <div ><button className="bg-primary items-center py-2 px-6 rounded text-white">Apply Now</button></div>
+        <div className="text-xs   absolute bottom-0 left-1/3"> Listed By : <Link href="#" className="text-primary underline font-bold">{property.owner}</Link></div>
+        <div  className="absolute bottom-0 left-3/4"><button className="bg-primary items-center py-2 px-6 rounded text-xs   text-white ">Apply Now</button></div>
       </div>
       <main></main>
     </section>
