@@ -9,13 +9,16 @@
       "descriptionn": "This popaaszerty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
       "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
       "location": [
         {
           "city": "Ikorodu Property ",
           "address": "3, Majekodunmi street"
         }
       ],
-      "owner": " Biodun Odeleye & Co."
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000"
     },
     {
       "id": 2,
@@ -26,13 +29,16 @@
       "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
       "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
       "location": [
         {
           "city": "Ajah Property",
           "address": "3, Majekodunmi street"
         }
       ],
-      "owner": " Biodun Odeleye & Co."
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000"
     },
     {
       "id": 3,
@@ -43,13 +49,16 @@
       "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
       "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
       "location": [
         {
           "city": "Ikorodu Property",
           "address": "3, Majekodunmi street"
         }
       ],
-      "owner": " Biodun Odeleye & Co."
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000"
     },
     {
       "id": 4,
@@ -60,13 +69,16 @@
       "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
       "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
       "location": [
         {
           "city": "Ikorodu Property",
           "address": "3, Majekodunmi street"
         }
       ],
-      "owner": " Biodun Odeleye & Co."
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000"
     },
     {
       "id": 5,
@@ -77,13 +89,16 @@
       "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
       "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
       "location": [
         {
           "city": "Ikorodu Property",
           "address": "3, Majekodunmi street"
         }
       ],
-      "owner": " Biodun Odeleye & Co."
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000"
     },
     {
       "id": 6,
@@ -94,13 +109,16 @@
       "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
       "price": "$ 2,000/month",
       "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
       "location": [
         {
           "city": "Ikorodu Property",
           "address": "3, Majekodunmi street"
         }
       ],
-      "owner": " Biodun Odeleye & Co."
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000"
     }
   ]
 }

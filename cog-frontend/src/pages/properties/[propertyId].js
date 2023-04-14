@@ -4,13 +4,13 @@ import foward from "../../../public/assets/icons/foward.png";
 import backward from "../../../public/assets/icons/backward.png";
 const Property = ({ property }) => {
   return (
-    <section className="w-3/4 m-auto ">
+    <section className="w-3/4 m-auto border border-managerColor   my-4">
       <div className="flex justify-between  relative ">
-        <div>
+        <div className="pl-8">
           {property.location[0].city}
           <p>{property.location[0].address}</p>
         </div>
-        <div className="text-xs absolute bottom-0 left-1/3">
+        <div className="text-xs absolute bottom-0 left-1/3 ">
           {" "}
           Listed By :{" "}
           <Link href="#" className="text-primary underline font-bold">
@@ -24,7 +24,7 @@ const Property = ({ property }) => {
         </div>
       </div>
       <hr className="mt-4" />
-      <main className="flex justify-between mt-4">
+      <main className="flex justify-between mt-4 pl-8">
         <div>
           <Image
             src={`/assets/images/${property.image}`}
@@ -32,28 +32,60 @@ const Property = ({ property }) => {
             height={800}
             alt="property-Image"
           />
-          <div className="flex  justify-between mt-4">
-            <div className="flex items-center bg-black">
-              <Image src={backward} alt="backward-icon" />
+          <div className="flex  justify-center mt-4">
+            <div className="flex items-center bg-lightGrey p-2 cursor-pointer  rounded hover:bg-primary h-1/2 my-auto">
+              <Image
+                src={backward}
+                alt="backward-icon"
+                width="auto"
+                height="auto"
+              />
             </div>
             <div className="items-center flex p-4 border-rounded">
-            <Image
-              src={`/assets/images/${property.image}`}
-              width={50}
-              height={60}
-            />
+              <Image
+                src={`/assets/images/${property.image}`}
+                width={50}
+                height={60}
+                alt="Property Image"
+              />
             </div>
-            <Image
-              src={`/assets/images/${property.image}`}
-              width={50}
-              height={60}
-            />
-            <div className="flex items-center justify-center border-2 border-red-500   bg-black">
-              <Image src={foward} alt="foward-icon" />
+            <div className="items-center flex p-4 border-rounded">
+              <Image
+                src={`/assets/images/${property.image}`}
+                width={50}
+                height={60}
+                alt="Property Image"
+              />
+            </div>
+            <div className="flex items-center bg-lightGrey p-2 cursor-pointer  rounded hover:bg-primary h-1/2 my-auto">
+              <Image
+                src={foward}
+                alt="foward-icon"
+                width="auto"
+                height="auto"
+              />
             </div>
           </div>
         </div>
-        <div>lwflwf</div>
+        <div className="w-3/4">
+          <p>Listing Details</p>
+          <section className="flex justify-between">
+            <div className="border pl-8 pr-40 bg-cardColor">
+              <div className="mb-8 mt-2">
+                <p className="mb-4">Rent</p>
+                <p>{property.rent}</p>
+              </div>
+              <div className="mb-12">
+                <p>Available Date</p>
+                <p>{property.availableDate}</p>
+              </div>
+            </div>
+            <div className="border border-managerColor w-2/5 h-max mr-8 pl-4">
+              <p className="pt-4">Application Fee</p>
+              <p className="pt-2 pb-14 ">{property.applicationFee}</p>
+            </div>
+          </section>
+        </div>
       </main>
     </section>
   );
