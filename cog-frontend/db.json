@@ -18,8 +18,14 @@
         }
       ],
       "owner": " Biodun Odeleye & Co.",
-      "rent": "$1,000,000"
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "1",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
     },
+
     {
       "id": 2,
       "image": "property.png",
@@ -38,8 +44,14 @@
         }
       ],
       "owner": " Biodun Odeleye & Co.",
-      "rent": "$1,000,000"
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
     },
+
     {
       "id": 3,
       "image": "property.png",
@@ -58,8 +70,14 @@
         }
       ],
       "owner": " Biodun Odeleye & Co.",
-      "rent": "$1,000,000"
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
     },
+
     {
       "id": 4,
       "image": "property.png",
@@ -78,8 +96,14 @@
         }
       ],
       "owner": " Biodun Odeleye & Co.",
-      "rent": "$1,000,000"
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
     },
+
     {
       "id": 5,
       "image": "property.png",
@@ -98,8 +122,14 @@
         }
       ],
       "owner": " Biodun Odeleye & Co.",
-      "rent": "$1,000,000"
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
     },
+
     {
       "id": 6,
       "image": "property.png",
@@ -118,7 +148,12 @@
         }
       ],
       "owner": " Biodun Odeleye & Co.",
-      "rent": "$1,000,000"
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
     }
   ]
 }

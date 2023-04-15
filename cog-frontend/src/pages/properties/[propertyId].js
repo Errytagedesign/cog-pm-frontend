@@ -80,13 +80,38 @@ const Property = ({ property }) => {
                 <p>{property.availableDate}</p>
               </div>
             </div>
-            <div className="border border-managerColor w-2/5 h-max mr-8 pl-4">
+            <div className="border border-managerColor w-2/5 h-max mr-8 pl-4 bg-cardColor">
               <p className="pt-4">Application Fee</p>
               <p className="pt-2 pb-14 ">{property.applicationFee}</p>
             </div>
           </section>
         </div>
       </main>
+      <section className="flex justify-between w-3/4 m-auto mt-4">
+        <div>
+          <p>Unit Images</p>
+        </div>
+        <div>
+          <p>Unit Details</p>
+        </div>
+      </section>
+      <hr className="mb-4" />
+      <section className="text-xs text-lightGrey flex justify-between w-3/6 ml-12">
+        <div>
+          BEDROOMS
+          <p className="py-2">{property.bedroom} Bed{property.bedroom > 1 ? 's' : ''}</p>
+          <p className="uppercase py-2">Unit Description</p> <p>{property.unitDescription}</p>
+          <p className="uppercase py-2">Unit Features</p> <p>{property.unitFeatures}</p>
+        </div>
+        <div>
+          RESTROOMS
+          <p className="py-2">{property.restroom} Restroom{property.restroom > 1 ? 's' : ''}</p>
+        </div>
+        <div>
+          SIZE
+          <p className="py-2">{property.size}m2</p>
+        </div>
+      </section>
     </section>
   );
 };
