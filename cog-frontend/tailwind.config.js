@@ -19,7 +19,8 @@ module.exports = {
         sliderColor: '#D2F4FF',
         databaseColor: '#E6736C',
         keyColor: '#A69FF7',
-        searchColor: '#DFE0A5'
+        searchColor: '#DFE0A5',
+        cardColor: " #F5F5F5"
 
       },
       fontFamily:{
