@@ -1,6 +1,10 @@
+// import Router from "next/router";
+import { useRouter } from "next/router";
 const RentalNavBar = () => {
+ const router = useRouter()
     const handleClick = () =>{
         console.log("Clicked");
+        router.push('/')
     }
   return (
   <section className="w-4/5 m-auto bg-primary">
