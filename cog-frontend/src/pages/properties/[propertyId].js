@@ -2,10 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import foward from "../../../public/assets/icons/foward.png";
 import backward from "../../../public/assets/icons/backward.png";
+import RentalNavBar from "../../../components/rentalNavbar";
 const Property = ({ property }) => {
   return (
     <main>
-
+      <RentalNavBar />
       <h1 className="w-3/4 m-auto font-bold">Rental Summary</h1>
       <section className="w-3/4 m-auto border border-managerColor my-12">
         <div className="flex justify-between  relative ">

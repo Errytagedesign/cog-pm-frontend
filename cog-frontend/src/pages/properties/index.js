@@ -1,15 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import RentalNavBar from "../../../components/rentalNavbar";
 const PropertyList = ({ properties }) => {
   return (
     <div>
-      <h1 className="w-4/5 m-auto">List of Properties</h1>
+      <RentalNavBar />
+      <h1 className="w-4/5 m-auto font-bold my-4">Rentals</h1>
       <div className="">
         {properties.map((asset) => {
           return (
             <div
               key={asset.key}
-              className="border border-gray-300 m-auto flex items-center w-4/5"
+              className="border border-gray-300 rounded-l-xl m-auto flex items-center w-4/5"
             >
               <Link href={`properties/${asset.id}`}>
                 <div className="flex ">
