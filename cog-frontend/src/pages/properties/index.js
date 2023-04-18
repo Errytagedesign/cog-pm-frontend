@@ -1,7 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import RentalNavBar from "../../../components/rentalNavbar";
+import { useState } from "react";
+import Pagination from "../../../components/pagination";
+import { paginate } from "../../../components/paginate";
 const PropertyList = ({ properties }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 10;
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+  const paginatedPosts = paginate(properties, currentPage, pageSize);
+  console.log(paginatedPosts)
   return (
     <div>
       <RentalNavBar />
@@ -24,12 +34,21 @@ const PropertyList = ({ properties }) => {
                   </div>
                   <div className=" w-full flex-col items-center pt-8">
                     <h2 className="block">{asset.address}</h2>{" "}
-                    <h2 className="text-xs text-lightGrey py-4">{asset.city}</h2>
+                    <h2 className="text-xs text-lightGrey py-4">
+                      {asset.city}
+                    </h2>
                     <h2 className="pb-4">{asset.name}</h2>
-                    <small className="text-lightGrey "> {asset.descriptionn}</small>
+                    <small className="text-lightGrey ">
+                      {" "}
+                      {asset.descriptionn}
+                    </small>
                     <div className="flex justify-between relative top-10">
-                        <h2 className="absolute font-bold text-primary">{asset.price}</h2>
-                        <h2 className="absolute left-3/4 font-bold">{asset.available}</h2>
+                      <h2 className="absolute font-bold text-primary">
+                        {asset.price}
+                      </h2>
+                      <h2 className="absolute left-3/4 font-bold">
+                        {asset.available}
+                      </h2>
                     </div>
                   </div>
                 </div>
@@ -38,19 +57,25 @@ const PropertyList = ({ properties }) => {
             </div>
           );
         })}
+        <Pagination
+          items={properties.length} // 100
+          currentPage={currentPage} // 1
+          pageSize={pageSize} // 10
+          onPageChange={onPageChange}
+        />
       </div>
     </div>
   );
 };
 export default PropertyList;
 
-export async function getStaticProps() {
-  const response = await fetch("http://localhost:4000/properties");
+export async function getStaticProps(context) {
+  const response = await fetch("http://localhost:4000/properties?");
   const data = await response.json();
 
   return {
     props: {
-      properties: data,
+      properties: data.slice(0, 100),
     },
   };
 }

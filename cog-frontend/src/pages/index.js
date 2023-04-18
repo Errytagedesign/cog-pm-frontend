@@ -13,7 +13,6 @@ import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
 import lady from "../../public/assets/images/lady.png";
 import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
-// import Footer from "../../components/footer";
 export default function Home() {
   return (
     <main className="font-Euclid">
