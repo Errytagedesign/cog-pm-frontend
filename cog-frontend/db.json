@@ -1,0 +1,159 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "image": "property.png",
+      "address": "22, Awolo road, ikeja",
+      "city": "Lagos. 100001",
+      "name": "2 Bed l 1 Bath l 2000 sqft",
+      "descriptionn": "This popaaszerty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "price": "$ 2,000/month",
+      "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
+      "location": [
+        {
+          "city": "Ikorodu Property ",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "1",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
+    },
+
+    {
+      "id": 2,
+      "image": "property.png",
+      "address": "22, Awolo road, ikeja",
+      "city": "Lagos. 100001",
+      "name": "2 Bed l 1 Bath l 2000 sqft",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "price": "$ 2,000/month",
+      "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
+      "location": [
+        {
+          "city": "Ajah Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
+    },
+
+    {
+      "id": 3,
+      "image": "property.png",
+      "address": "22, Awolo road, ikeja",
+      "city": "Lagos. 100001",
+      "name": "2 Bed l 1 Bath l 2000 sqft",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "price": "$ 2,000/month",
+      "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
+    },
+
+    {
+      "id": 4,
+      "image": "property.png",
+      "address": "22, Awolo road, ikeja",
+      "city": "Lagos. 100001",
+      "name": "2 Bed l 1 Bath l 2000 sqft",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "price": "$ 2,000/month",
+      "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
+    },
+
+    {
+      "id": 5,
+      "image": "property.png",
+      "address": "22, Awolo road, ikeja",
+      "city": "Lagos. 100001",
+      "name": "2 Bed l 1 Bath l 2000 sqft",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "price": "$ 2,000/month",
+      "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
+    },
+
+    {
+      "id": 6,
+      "image": "property.png",
+      "address": "22, Awolo road, ikeja",
+      "city": "Lagos. 100001",
+      "name": "2 Bed l 1 Bath l 2000 sqft",
+      "descriptionn": "This poperty is a five minute call from the city centre and oversees the Lagos Assembly.",
+      "price": "$ 2,000/month",
+      "available": "Available Dec 1",
+      "availableDate": "12/11/2022",
+      "applicationFee": "$ 40.00",
+      "location": [
+        {
+          "city": "Ikorodu Property",
+          "address": "3, Majekodunmi street"
+        }
+      ],
+      "owner": " Biodun Odeleye & Co.",
+      "rent": "$1,000,000",
+      "bedroom": "3",
+      "restroom": "2",
+      "size": "1200",
+      "unitDescription": "Furnished 3 bedroom suite at Ikeja",
+      "unitFeatures": "Dishwasher, Pet-friendly and trash"
+    }
+  ]
+}

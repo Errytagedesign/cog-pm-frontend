@@ -233,6 +233,7 @@
     );
     background-clip: padding-box;
     backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
   }
 
   .description div {

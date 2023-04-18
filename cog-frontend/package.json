@@ -8,12 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "build-css": "tailwindcss -i ./src/styles/globals.css -o ./dist/output.css",
-    "watch": "tailwindcss -i ./src/styles/globals.css -o ./dist/output.css --watch"
+    "watch": "tailwindcss -i ./src/styles/globals.css -o ./dist/output.css --watch",
+    "serve-json" : "json-server --watch db.json --port 4000"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "json-server": "^0.17.3",
     "next": "13.2.4",
     "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
