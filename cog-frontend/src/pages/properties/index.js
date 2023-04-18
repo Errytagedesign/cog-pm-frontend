@@ -3,7 +3,7 @@ import Image from "next/image";
 import RentalNavBar from "../../../components/rentalNavbar";
 import { useState } from "react";
 import Pagination from "../../../components/pagination";
-import { paginate } from "../../../components/paginate";
+import { paginate } from "../../../helpers/paginate";
 const PropertyList = ({ properties }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
@@ -11,13 +11,13 @@ const PropertyList = ({ properties }) => {
     setCurrentPage(page);
   };
   const paginatedPosts = paginate(properties, currentPage, pageSize);
-  console.log(paginatedPosts)
+  console.log(paginatedPosts);
   return (
     <div>
       <RentalNavBar />
       <h1 className="w-4/5 m-auto font-bold my-4">Rentals</h1>
       <div className="">
-        {properties.map((asset) => {
+        {paginatedPosts.map((asset) => {
           return (
             <div
               key={asset.key}
