@@ -10,6 +10,10 @@ const PropertyList = ({ properties }) => {
   const onPageChange = (page) => {
     setCurrentPage(page);
   };
+
+  const onPrev = (page) => {
+     setCurrentPage(page - 1)
+  }
   const paginatedPosts = paginate(properties, currentPage, pageSize);
   console.log(paginatedPosts);
   return (
