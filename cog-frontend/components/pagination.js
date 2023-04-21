@@ -6,18 +6,12 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange, onPrev }) => {
   const router = useRouter()
   if (pagesCount === 1) return null;
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
-  const handlePrev = () =>{
-    
-    // console.log('Clicked')
-    if(currentPage > 1){
-      router.push(`/properties${currentPage - 1}`)
-     }
-  }
+
   return (
     <div className="w-4/5 m-auto text-xs text-lightGrey">
       <ul className="flex justify-end items-center">
         <span className="mr-8">Pages</span>{" "}
-        <span onClick={handlePrev}>
+        <span onClick={() => onPageChange(currentPage >=1 ? currentPage-1 : currentPage)}>
           <Backward />
         </span>
         {pages.map((page) => (
@@ -30,7 +24,7 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange, onPrev }) => {
             </a>
           </li>
         ))}
-        <span >
+        <span onClick={() => onPageChange(currentPage+1)}>
           <Foward />
         </span>
       </ul>
