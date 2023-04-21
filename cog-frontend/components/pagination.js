@@ -1,18 +1,23 @@
-import foward from "../public/assets/icons/foward.png";
-import backward from "../public/assets/icons/backward.png";
+import { useRouter } from "next/router";
 import Backward from "./backward";
 import Foward from "./foward";
 const Pagination = ({ items, pageSize, currentPage, onPageChange, onPrev }) => {
   const pagesCount = Math.ceil(items / pageSize); // 100/10
-
+  const router = useRouter()
   if (pagesCount === 1) return null;
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
-
+  const handlePrev = () =>{
+    
+    // console.log('Clicked')
+    if(currentPage > 1){
+      router.push(`/properties${currentPage - 1}`)
+     }
+  }
   return (
     <div className="w-4/5 m-auto text-xs text-lightGrey">
       <ul className="flex justify-end items-center">
         <span className="mr-8">Pages</span>{" "}
-        <span onClick={() => onPrev(page)}>
+        <span onClick={handlePrev}>
           <Backward />
         </span>
         {pages.map((page) => (
