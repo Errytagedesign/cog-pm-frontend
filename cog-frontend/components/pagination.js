@@ -12,7 +12,9 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange, onPrev }) => {
       <ul className="flex justify-end items-center">
         <span className="mr-8">Pages</span>{" "}
         <span onClick={() => onPageChange(currentPage >=1 ? currentPage-1 : currentPage)}>
-          <Backward />
+          {
+            currentPage > 1 && <Backward />
+          }
         </span>
         {pages.map((page) => (
           <li key={page} className="my-4 ">
@@ -25,7 +27,9 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange, onPrev }) => {
           </li>
         ))}
         <span onClick={() => onPageChange(currentPage+1)}>
-          <Foward />
+          {
+            currentPage != pagesCount && <Foward />
+          }
         </span>
       </ul>
     </div>
