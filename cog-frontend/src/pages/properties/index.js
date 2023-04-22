@@ -46,11 +46,11 @@ const PropertyList = ({ properties }) => {
                       {" "}
                       {asset.descriptionn}
                     </small>
-                    <div className="flex justify-between relative top-10">
-                      <h2 className="absolute font-bold text-primary">
+                    <div className="flex justify-between mt-8  w-full">
+                      <h2 className="font-bold text-primary">
                         {asset.price}
                       </h2>
-                      <h2 className="absolute left-3/4 font-bold">
+                      <h2 className=" left-full font-bold ">
                         {asset.available}
                       </h2>
                     </div>
