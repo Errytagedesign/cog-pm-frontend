@@ -4,6 +4,7 @@ import RentalNavBar from "../../../components/rentalNavbar";
 import { useState } from "react";
 import Pagination from "../../../components/pagination";
 import { paginate } from "../../../helpers/paginate";
+import PropertyFilter from "../../../components/propertyFilter";
 const PropertyList = ({ properties }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 10;
@@ -20,6 +21,7 @@ const PropertyList = ({ properties }) => {
     <div>
       <RentalNavBar />
       <h1 className="w-4/5 m-auto font-bold my-4">Rentals</h1>
+      <PropertyFilter />
       <div className="">
         {paginatedPosts.map((asset) => {
           return (
