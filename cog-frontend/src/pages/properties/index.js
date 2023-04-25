@@ -7,7 +7,7 @@ import { paginate } from "../../../helpers/paginate";
 // import PropertyFilter from "../../../components/propertyFilter";
 // import { useState } from "react";
 
-const options = ["Property Type", "Option 1", "Option 2", "Option 3"];
+const options = ["Property Type", "Office space", "Whole home", "Warehouse/storage facility", "Hall", "Land", "Flat/apartment", "Retail shop space"];
 const baths = [3, 4, 5, 4];
 
 function PropertyFilter() {
@@ -56,9 +56,9 @@ const PropertyList = ({ properties }) => {
     setCurrentPage(page);
   };
 
-  const onPrev = (page) => {
-    setCurrentPage(page - 1);
-  };
+  // const onPrev = (page) => {
+  //   setCurrentPage(page - 1);
+  // };
   const paginatedPosts = paginate(properties, currentPage, pageSize);
   console.log(paginatedPosts);
   return (
@@ -123,7 +123,7 @@ export async function getStaticProps(context) {
   // const filteredData = data.filter(ite => ite.bedroom === '2')
   return {
     props: {
-      properties: data.filter(item => item.bedroom === '2') && data,
+      properties: data.filter(item => item.propertyType === options) ,
       // filteredData
     },
   };
