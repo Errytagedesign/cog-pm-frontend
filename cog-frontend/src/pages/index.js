@@ -13,7 +13,6 @@ import database from "../../public/assets/icons/fi_database.png";
 import key from "../../public/assets/icons/fi_key.png";
 import lady from "../../public/assets/images/lady.png";
 import Arrow from "../../public/assets/icons/Arrow - Down 2.png";
-// import Footer from "../../components/footer";
 export default function Home() {
   return (
     <main className="font-Euclid">
@@ -118,7 +117,7 @@ const Rentals = () => {
       </div>
       <div className="relative h-96 w-6/12 left-14 bottom-5">
         <div className="h-full absolute left-10 top-10 w-8/12 bg-managerColor rounded-2xl"></div>
-        <div className="h-full absolute  w-8/12 left-6 top-5 bg-sliderColor rounded-2xl"></div>
+        <div className="h-full absolute w-8/12 left-6 top-5 bg-sliderColor rounded-2xl"></div>
         <div className="h-full w-max relative left-3 overflow-hidden rounded-2xl">
           <Image src={lady} alt="Lady Image" />
           <span className="absolute bottom-7 text-white left-4 text-xs font-light">

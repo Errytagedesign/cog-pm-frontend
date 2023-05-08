@@ -3,6 +3,7 @@ import Image from "next/image";
 import foward from "../../../public/assets/icons/foward.png";
 import backward from "../../../public/assets/icons/backward.png";
 import RentalNavBar from "../../../components/rentalNavbar";
+import Backward from "../../../components/backward";
 const Property = ({ property }) => {
   return (
     <main>
@@ -39,14 +40,7 @@ const Property = ({ property }) => {
               alt="property-Image"
             />
             <div className="flex  justify-center mt-4">
-              <div className="flex items-center bg-lightGrey p-2 cursor-pointer  rounded hover:bg-primary h-1/2 my-auto">
-                <Image
-                  src={backward}
-                  alt="backward-icon"
-                  width="auto"
-                  height="auto"
-                />
-              </div>
+             <Backward />
               <div className="items-center flex p-4 border-rounded">
                 <Image
                   src={`/assets/images/${property.image}`}
