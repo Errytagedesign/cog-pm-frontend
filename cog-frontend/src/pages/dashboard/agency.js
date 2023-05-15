@@ -5,6 +5,7 @@ import PPImage from "../../../public/assets/icons/ppimage.png";
 import ProjectPopUP from "../../../components/projectPopup";
 import card from "../../../public/assets/icons/card.png";
 import bluecard from "../../../public/assets/icons/bluecard.png";
+import circle from '../../../public/assets/icons/circle.png'
 import { useState } from "react";
 const Agency = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -93,6 +94,25 @@ const Agency = () => {
               View custom report
             </button>
           </div>
+          <section className="border-2 border-primary my-12 rounded-sm px-4 py-6">
+            <div className="flex justify-between pb-6 ">
+                <span className="font-bold text-xl text-gray-700">Recent Activities</span>
+                <span className="cursor-pointer text-primary underline">View All</span>
+                {/* We would be mapping some activities gotten from database here */}
+                
+            </div>
+            <hr className="mb-2 border" />
+            <section>
+                <div className="flex items-center">
+                    <div><Image src={circle}/></div>
+                    <div className="ml-4">
+                       <div className="font-bold">New rental lead for Ikorodu property</div>
+                       <div className="text-gray-600 text-xs font-bold mt-2">Fri Jun 15,2022 GMT 13:00</div>
+                    </div>
+                </div>
+                <hr className="mt-4 border"/>
+            </section>
+          </section>
         </main>
       </sction>
     </section>
