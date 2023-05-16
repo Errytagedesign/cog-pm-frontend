@@ -69,6 +69,9 @@ li.go2335061104::before {
   
 }
 
+.active{
+  color: #049561;
+}
 
 @font-face {
   font-family: "Euclid";
