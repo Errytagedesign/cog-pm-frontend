@@ -4,50 +4,6 @@ import RentalNavBar from "../../../components/rentalNavbar";
 import { useState } from "react";
 import Pagination from "../../../components/pagination";
 import { paginate } from "../../../helpers/paginate";
-// import PropertyFilter from "../../../components/propertyFilter";
-// import { useState } from "react";
-
-const options = ["Property Type", "Office space", "Whole home", "Warehouse/storage facility", "Hall", "Land", "Flat/apartment", "Retail shop space"];
-const baths = [3, 4, 5, 4];
-
-function PropertyFilter() {
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-
-  const handleOptionChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
-
-  return (
-    <div>
-      <label htmlFor="dropdown"></label>
-      <select
-        id="dropdown"
-        value={selectedOption}
-        onChange={handleOptionChange}
-      >
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-      <label htmlFor="dropdown"></label>
-      <select
-        id="dropdown"
-        value={selectedOption}
-        onChange={handleOptionChange}
-      >
-        {baths.map((bath) => (
-          <option key={bath} value={bath}>
-            {bath}
-          </option>
-        ))}
-      </select>
-    </div>
-  );
-}
-
-// export default PropertyFilter;
 
 const PropertyList = ({ properties }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -56,17 +12,15 @@ const PropertyList = ({ properties }) => {
     setCurrentPage(page);
   };
 
-  // const onPrev = (page) => {
-  //   setCurrentPage(page - 1);
-  // };
   const paginatedPosts = paginate(properties, currentPage, pageSize);
   console.log(paginatedPosts);
   return (
     <div>
       <RentalNavBar />
       <h1 className="w-4/5 m-auto font-bold my-4">Rentals</h1>
-      <PropertyFilter />
+      {/* <PropertyFilter /> */}
       <div className="">
+        
         {paginatedPosts.map((asset) => {
           return (
             <div
@@ -105,6 +59,7 @@ const PropertyList = ({ properties }) => {
             </div>
           );
         })}
+
         <Pagination
           items={properties.length} // 100
           currentPage={currentPage} // 1
@@ -115,16 +70,59 @@ const PropertyList = ({ properties }) => {
     </div>
   );
 };
+
+// const options = [
+//   "Property Type",
+//   "Office space",
+//   "Whole home",
+//   "Warehouse/storage facility",
+//   "Hall",
+//   "Land",
+//   "Flat/apartment",
+//   "Retail shop space",
+// ];
+// const baths = [3, 4, 5, 4];
+
+// function PropertyFilter({properties}) {
+//   console.log(properties);
+//   // const [selectedOption, setSelectedOption] = useState([0]);
+//   const [selectedSpace, setSelectedSpace] = useState([1]);
+//   const handleOptionChange = (e) => {
+//     setSelectedSpace(e.target.value);
+//   };
+//   function handleSubmit(event) {
+//     event.preventDefault();
+//   }
+// console.log(selectedSpace);
+//   return (
+//    <div>
+//      <form onSubmit={handleSubmit}>
+//       <label htmlFor="dropdown"></label>
+//       <select id="dropdown" value={selectedSpace} onChange={handleOptionChange}>
+//         {options.map((option) => (
+//           <option key={option} value={option}>
+//             {option}
+//           </option>
+//         ))}
+//       </select>
+
+//       <button>Submit</button>
+//     </form>
+//     {
+      
+//     }
+//    </div>
+//   );
+// }
 export default PropertyList;
 
 export async function getStaticProps(context) {
   const response = await fetch("http://localhost:4000/properties");
   const data = await response.json();
-  // const filteredData = data.filter(ite => ite.bedroom === '2')
+
   return {
     props: {
-      properties: data.filter(item => item.propertyType === options) ,
-      // filteredData
+      properties: data,
     },
   };
 }

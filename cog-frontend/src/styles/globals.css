@@ -58,6 +58,16 @@ li.go2335061104::before {
 .mainColor {
   color: var(--mainColor);
 }
+.popup{
+  background-color: black;
+  display: none;
+  
+}
+
+.popup.open{
+  display: flex;
+  
+}
 
 
 @font-face {
