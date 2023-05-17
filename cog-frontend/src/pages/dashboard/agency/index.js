@@ -1,5 +1,5 @@
 import Dashboard from "..";
-import ProspectHeader from "../../../../components/ProspectsHeader";
+import ProspectHeader from "../../../../components/prospect/ProspectsHeader";
 import Image from "next/image";
 import card from '../../../../public/assets/icons/card.png'
 import bluecard from '../../../../public/assets/icons/bluecard.png'
