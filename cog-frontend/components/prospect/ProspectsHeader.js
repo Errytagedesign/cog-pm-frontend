@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Bell from "../public/assets/icons/bell.png";
-import PPImage from "../public/assets/icons/ppimage.png";
+import Bell from "../../public/assets/icons/bell.png";
+import PPImage from "../../public/assets/icons/ppimage.png";
 const ProspectHeader = () =>{
     return(
        <div>
