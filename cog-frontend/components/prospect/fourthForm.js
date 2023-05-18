@@ -1,4 +1,4 @@
-const ThirdForm = ({ formData, setFormData }) => {
+const FourthForm = ({ formData, setFormData }) => {
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
     setFormData((prevFormData) => {
@@ -25,14 +25,13 @@ const ThirdForm = ({ formData, setFormData }) => {
               className="border border-primary px-2 text-sm outline-none"
               placeholder="Enter name"
               type="checkbox"
-              id="cacIncorporationCertificate"
-              name="cacIncorporationCertificate"
-            //   checked={formData.cac_incorporation_certificate}
-              // checked= {form.cac}
+              id="nationalIdententity"
+              name="nationalIdententity"
+              //   checked= {formData.nationalIdententity}
               onChange={handleChange}
             />{" "}
-            <label htmlFor="cac incorporation certificate">
-              CAC Incorporation Certificate
+            <label htmlFor="nationalIdententity">
+              National Identity certificate e.g. International passport, NIN etc
             </label>{" "}
             <br />
           </div>
@@ -43,10 +42,11 @@ const ThirdForm = ({ formData, setFormData }) => {
               type="checkbox"
               id="taxCertificate"
               name="taxCertificate"
-            //   checked={formData.tax_certificate}
+              //   checked= {formData.tax_certificate}
               onChange={handleChange}
             />{" "}
-            <label htmlFor="tax certificate">Tax certificate</label> <br />
+            <label htmlFor="tax certificate">Employment confirmation</label>{" "}
+            <br />
           </div>
           <div>
             <input
@@ -55,10 +55,10 @@ const ThirdForm = ({ formData, setFormData }) => {
               type="checkbox"
               id="creditReport"
               name="creditReport"
-            //   checked={formData.credit_report}
+              //   checked= {formData.credit_report}
               onChange={handleChange}
             />{" "}
-            <label htmlFor="credit report">Credit report</label> <br />
+            <label htmlFor="credit report">Police report</label> <br />
           </div>
         </form>
       </main>
@@ -66,4 +66,4 @@ const ThirdForm = ({ formData, setFormData }) => {
   );
 };
 
-export default ThirdForm;
+export default FourthForm;
