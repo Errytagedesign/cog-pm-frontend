@@ -6,12 +6,17 @@ import FourthForm from "./fourthForm";
 import EightForm from "./eightForm";
 import NinethForm from "./ninethForm";
 import TenthForm from "./tenthForm";
+import EleventhForm from "./eleventhForm";
 const ProspectForm = () => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     clientType: "",
     propertyType: "",
+    unitId: "",
+    restRooms: "",
+    bedRooms: "",
+    sittingRooms: "",
     cacIncorporationCertificate: true,
     taxCertificate: true,
     creditReport: true,
@@ -33,8 +38,10 @@ const ProspectForm = () => {
         return <EightForm formData={formData} setFormData={setFormData} />;
       case 5:
         return <NinethForm formData={formData} setFormData={setFormData} />;
-        case 6:
-          return <TenthForm formData={formData} setFormData={setFormData}/>
+      case 6:
+        return <TenthForm formData={formData} setFormData={setFormData} />;
+      case 7:
+        return <EleventhForm formData={formData} setFormData={setFormData} />;
       default:
         return <FirstForm formData={formData} setFormData={setFormData} />;
     }
