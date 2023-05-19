@@ -1,4 +1,4 @@
-const SecondForm = ({ formData, setFormData }) => {
+const TenthForm = ({ formData, setFormData }) => {
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData((prevFormData) => {
@@ -12,8 +12,12 @@ const SecondForm = ({ formData, setFormData }) => {
   return (
     <section className="py-6 ">
       <div>
-        <h1 className="font-bold text-gray-700">Client Name</h1>
-        <small className="text-xs text-gray-400">Enter client name</small>
+        <h1 className="font-bold text-gray-700">Unit ID</h1>
+        <small className="text-xs text-gray-400">
+          This is where you enter the identity of the property unit being
+          prospected. A property can have sub-units within it. This is to
+          identify the specific unit the prospect is interested in.
+        </small>
       </div>
 
       <main className="my-10">
@@ -35,4 +39,4 @@ const SecondForm = ({ formData, setFormData }) => {
   );
 };
 
-export default SecondForm;
+export default TenthForm;

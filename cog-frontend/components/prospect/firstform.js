@@ -1,9 +1,7 @@
 import { useState } from "react";
 
-const FirstForm = () => {
-  const [formData, setFormData] = useState({
-    clientType : ""
-  });
+const FirstForm = ({formData, setFormData}) => {
+ 
 
   function handleChange(event){
     const {name, value, type, checked} = event.target
@@ -16,13 +14,13 @@ const FirstForm = () => {
   }
   console.log(formData);
   return (
-    <section>
+    <section className="py-6 ">
       <div>
         <h1 className="font-bold text-gray-700">Client Type</h1>
         <small className="text-xs text-gray-400">Select client type</small>
       </div>
 
-      <main>
+      <main className="my-10">
         <form>
           <div>
             <input type="radio" id="Company/Organization" 
