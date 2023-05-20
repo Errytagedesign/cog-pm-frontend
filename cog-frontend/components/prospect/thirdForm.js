@@ -10,7 +10,7 @@ const ThirdForm = ({ formData, setFormData }) => {
   }
   console.log(formData);
   return (
-    <section className="py-6 ">
+    <section className="py-6 h-96 overflow-scroll">
       <div>
         <h1 className="font-bold text-gray-700">Verification checklist</h1>
         <small className="text-xs text-gray-400">
@@ -20,7 +20,7 @@ const ThirdForm = ({ formData, setFormData }) => {
 
       <main className="my-10">
         <form>
-          <div>
+          <div className="pt-4">
             <input
               className="border border-primary px-2 text-sm outline-none"
               placeholder="Enter name"
@@ -36,7 +36,7 @@ const ThirdForm = ({ formData, setFormData }) => {
             </label>{" "}
             <br />
           </div>
-          <div>
+          <div className="pt-4">
             <input
               className="border border-primary px-2 text-sm outline-none"
               placeholder="Enter name"
@@ -48,7 +48,7 @@ const ThirdForm = ({ formData, setFormData }) => {
             />{" "}
             <label htmlFor="tax certificate">Tax certificate</label> <br />
           </div>
-          <div>
+          <div className="pt-4">
             <input
               className="border border-primary px-2 text-sm outline-none"
               placeholder="Enter name"

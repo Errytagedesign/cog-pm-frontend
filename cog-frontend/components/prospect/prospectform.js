@@ -7,6 +7,12 @@ import EightForm from "./eightForm";
 import NinethForm from "./ninethForm";
 import TenthForm from "./tenthForm";
 import EleventhForm from "./eleventhForm";
+import TwelvethForm from "./twelvethForm";
+import ThirteenthForm from "./thirteenthForm";
+import FourteenthForm from "./fourteenthForm";
+import FifteenForm from "./fifteenForm";
+import SixteenthForm from "./sixteenthForm";
+import SeventeenthForm from "./seventeenthForm";
 const ProspectForm = () => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
@@ -17,6 +23,14 @@ const ProspectForm = () => {
     restRooms: "",
     bedRooms: "",
     sittingRooms: "",
+    age: "",
+    religion: "",
+    ethnic: "",
+    profession: "",
+    type: "",
+    ageRange: "",
+    business: "",
+    otherEthnicity: "",
     cacIncorporationCertificate: true,
     taxCertificate: true,
     creditReport: true,
@@ -42,8 +56,21 @@ const ProspectForm = () => {
         return <TenthForm formData={formData} setFormData={setFormData} />;
       case 7:
         return <EleventhForm formData={formData} setFormData={setFormData} />;
+      case 8:
+        return <TwelvethForm formData={formData} setFormData={setFormData} />;
+      case 9:
+        return <ThirteenthForm formData={formData} setFormData={setFormData} />;
+      case 10:
+        return <FourteenthForm formData={formData} setFormData={setFormData} />;
+      case 11:
+        return <FifteenForm formData={formData} setFormData={setFormData} />;
+        case 12:
+          return <SixteenthForm formData={formData} setFormData={setFormData}/>
+          case 13:
+            return <SeventeenthForm formData={formData} setFormData={setFormData}/>
       default:
-        return <FirstForm formData={formData} setFormData={setFormData} />;
+        // return <FirstForm formData={formData} setFormData={setFormData} />;
+        return <h1>Your request has been submitted </h1>;
     }
   };
   function handleSubmit() {

@@ -10,7 +10,7 @@ const EightForm = ({ formData, setFormData }) => {
   }
   console.log(formData);
   return (
-    <section className="py-6 ">
+    <section className="py-6 h-96 overflow-scroll">
       <div>
         <h1 className="font-bold text-gray-700">Property Type</h1>
         <small className="text-xs text-gray-400">
@@ -21,7 +21,7 @@ const EightForm = ({ formData, setFormData }) => {
 
       <main className="my-10">
         <form>
-          <div className="py-6">
+          <div className="py-4">
             <input
               type="radio"
               id="Company/Organization"
@@ -31,7 +31,7 @@ const EightForm = ({ formData, setFormData }) => {
             />{" "}
             <label>Flat/apartment</label>
           </div>
-          <div className="py-6">
+          <div className="py-4">
             <input
               type="radio"
               id="individual"
@@ -41,7 +41,7 @@ const EightForm = ({ formData, setFormData }) => {
             />{" "}
             <label>Warehouse/storage facility</label>
           </div>
-          <div className="py-6">
+          <div className="py-4">
             <input
               type="radio"
               id="individual"
@@ -51,7 +51,7 @@ const EightForm = ({ formData, setFormData }) => {
             />{" "}
             <label>Whole home</label>
           </div>
-          <div className="py-6">
+          <div className="py-4">
             <input
               type="radio"
               id="individual"
@@ -61,7 +61,7 @@ const EightForm = ({ formData, setFormData }) => {
             />{" "}
             <label>office space</label>
           </div>
-          <div className="py-6">
+          <div className="py-4">
             <input
               type="radio"
               id="individual"

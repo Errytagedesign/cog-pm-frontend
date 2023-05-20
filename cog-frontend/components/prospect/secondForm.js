@@ -10,7 +10,7 @@ const SecondForm = ({ formData, setFormData }) => {
   }
   console.log(formData);
   return (
-    <section className="py-6 ">
+    <section className="py-6 h-96 overflow-scroll">
       <div>
         <h1 className="font-bold text-gray-700">Client Name</h1>
         <small className="text-xs text-gray-400">Enter client name</small>
@@ -18,7 +18,7 @@ const SecondForm = ({ formData, setFormData }) => {
 
       <main className="my-10">
         <form>
-          <div>
+          <div className="py-4">
             <label>Company/Organization</label> <br />
             <input
               className="border border-primary px-2 text-sm outline-none mt-2"
