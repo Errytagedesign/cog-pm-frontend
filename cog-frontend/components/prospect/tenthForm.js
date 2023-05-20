@@ -23,13 +23,13 @@ const TenthForm = ({ formData, setFormData }) => {
       <main className="my-10">
         <form>
           <div>
-            <label>Company/Organization</label> <br />
+            <label>Unit ID</label> <br />
             <input
               className="border border-primary px-2 text-sm outline-none mt-2"
-              placeholder="Enter name"
+              placeholder="Enter unit ID"
               type="text"
               id="Company/Organization"
-              name="name"
+              name="unitId"
               onChange={handleChange}
             />{" "}
           </div>
