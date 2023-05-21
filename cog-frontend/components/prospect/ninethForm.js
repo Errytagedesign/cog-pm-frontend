@@ -10,7 +10,7 @@ const NinethForm = ({ formData, setFormData }) => {
     }
     console.log(formData);
     return (
-      <section className="py-4 ">
+      <section className="py-4 h-96 overflow-scroll">
         <div>
           <h1 className="font-bold text-gray-700">Location</h1>
           <small className="text-xs text-gray-400">This is where you enter the location of the property being prospected.
@@ -19,7 +19,7 @@ const NinethForm = ({ formData, setFormData }) => {
   
         <main className="my-10">
           <form>
-            <div className="py-2">
+            <div className="py-4">
               <label>State</label> <br />
               <input
                 className="border rounded border-primary px-2 text-sm outline-none mt-2"
@@ -30,7 +30,7 @@ const NinethForm = ({ formData, setFormData }) => {
                 onChange={handleChange}
               />{" "}
             </div>
-            <div className="py-2">
+            <div className="py-4">
               <label>Local Government Area</label> <br />
               <input
                 className="border rounded border-primary px-2 text-sm outline-none mt-2"
@@ -41,7 +41,7 @@ const NinethForm = ({ formData, setFormData }) => {
                 onChange={handleChange}
               />{" "}
             </div>
-            <div className="py-2">
+            <div className="py-4">
               <label>Landmark/ward</label> <br />
               <input
                 className="border rounded border-primary px-2 text-sm outline-none mt-2"

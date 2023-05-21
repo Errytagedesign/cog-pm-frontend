@@ -10,7 +10,7 @@ const TenthForm = ({ formData, setFormData }) => {
   }
   console.log(formData);
   return (
-    <section className="py-6 ">
+    <section className="py-6 h-96 overflow-scroll">
       <div>
         <h1 className="font-bold text-gray-700">Unit ID</h1>
         <small className="text-xs text-gray-400">

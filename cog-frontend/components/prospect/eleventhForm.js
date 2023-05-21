@@ -12,7 +12,7 @@ function EleventhForm({ formData, setFormData }) {
   }
   console.log(formData);
   return (
-    <section className="py-6 ">
+    <section className="py-6 h-96 overflow-scroll">
       <div>
         <h1 className="font-bold text-gray-700">Unit Features</h1>
         <small className="text-xs text-gray-400">
@@ -23,7 +23,7 @@ function EleventhForm({ formData, setFormData }) {
 
       <main className="my-10">
         <form>
-          <div>
+          <div className="pt-4">
             <label>Number of sitting rooms</label> <br />
             <input
               className="border border-primary px-2 text-sm outline-none mt-2"
@@ -34,7 +34,7 @@ function EleventhForm({ formData, setFormData }) {
               onChange={handleChange}
             />{" "}
           </div>
-          <div>
+          <div className="pt-4">
             <label>Number of bedrooms</label> <br />
             <input
               className="border border-primary px-2 text-sm outline-none mt-2"
@@ -45,7 +45,7 @@ function EleventhForm({ formData, setFormData }) {
               onChange={handleChange}
             />{" "}
           </div>
-          <div>
+          <div className="pt-4">
             <label>Number of rest rooms</label> <br />
             <input
               className="border border-primary px-2 text-sm outline-none mt-2"
