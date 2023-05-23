@@ -13,6 +13,12 @@ import FourteenthForm from "./fourteenthForm";
 import FifteenForm from "./fifteenForm";
 import SixteenthForm from "./sixteenthForm";
 import SeventeenthForm from "./seventeenthForm";
+import EighteenthForm from "./eighteenthForm";
+import NineteenthForm from "./nineteenthForm";
+import TwentethForm from "./twentethForm";
+import TwentyfirstForm from "./twentyfirstForm";
+import TwentysecondForm from "./twentysecondForm";
+import ProspectSummary from "./projectSummary";
 const ProspectForm = () => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
@@ -23,7 +29,7 @@ const ProspectForm = () => {
     restRooms: "",
     bedRooms: "",
     sittingRooms: "",
-    age: "",
+    gender: "",
     religion: "",
     ethnic: "",
     profession: "",
@@ -31,6 +37,11 @@ const ProspectForm = () => {
     ageRange: "",
     business: "",
     otherEthnicity: "",
+    date: "",
+    amount: "",
+    rentalAmount: "",
+    recurringFees: "",
+    potentialDate: "",
     cacIncorporationCertificate: true,
     taxCertificate: true,
     creditReport: true,
@@ -64,10 +75,26 @@ const ProspectForm = () => {
         return <FourteenthForm formData={formData} setFormData={setFormData} />;
       case 11:
         return <FifteenForm formData={formData} setFormData={setFormData} />;
-        case 12:
-          return <SixteenthForm formData={formData} setFormData={setFormData}/>
-          case 13:
-            return <SeventeenthForm formData={formData} setFormData={setFormData}/>
+      case 12:
+        return <SixteenthForm formData={formData} setFormData={setFormData} />;
+      case 13:
+        return (
+          <SeventeenthForm formData={formData} setFormData={setFormData} />
+        );
+      case 14:
+        return <EighteenthForm formData={formData} setFormData={setFormData} />;
+      case 15:
+        return <NineteenthForm formData={formData} setFormData={setFormData} />;
+      case 16:
+        return <TwentethForm formData={formData} setFormData={setFormData} />;
+      case 17:
+        return (
+          <TwentyfirstForm formData={formData} setFormData={setFormData} />
+        );
+        case 18: 
+        return <TwentysecondForm formData={formData} setFormData={setFormData}/>
+        case 19:
+          return <ProspectSummary formData={formData} setFormData={setFormData}/>
       default:
         // return <FirstForm formData={formData} setFormData={setFormData} />;
         return <h1>Your request has been submitted </h1>;
@@ -94,7 +121,7 @@ const ProspectForm = () => {
         </div>
         <button onClick={handleSubmit}>
           <div className="bg-primary py-1 px-8 mr-2 rounded text-white">
-            {page >= 0 && "continue"}
+            {page >= 0 && "Continue"}
           </div>
         </button>
       </main>

@@ -27,7 +27,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="18-23"
-              name="age-range"
+              name="ageRange"
               value="18-23"
               onChange={handleChange}
             />{" "}
@@ -37,7 +37,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="24-29"
-              name="age-range"
+              name="agRrange"
               value="24-29"
               onChange={handleChange}
             />{" "}
@@ -47,7 +47,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="30-35"
-              name="age-range"
+              name="ageRange"
               value="30-35"
               onChange={handleChange}
             />{" "}
@@ -57,7 +57,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="36-41"
-              name="age-range"
+              name="ageRange"
               value="36-41"
               onChange={handleChange}
             />{" "}
@@ -67,7 +67,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="42-47"
-              name="age-range"
+              name="ageRange"
               value="42-47"
               onChange={handleChange}
             />{" "}
@@ -77,7 +77,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="54-59"
-              name="age-range"
+              name="ageRange"
               value="54-59"
               onChange={handleChange}
             />{" "}
@@ -87,7 +87,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="60-64"
-              name="age-range"
+              name="ageRange"
               value="60-64"
               onChange={handleChange}
             />{" "}
@@ -97,7 +97,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="65-70"
-              name="age-range"
+              name="ageRange"
               value="65-70"
               onChange={handleChange}
             />{" "}
@@ -107,7 +107,7 @@ function SixteenthForm({ formData, setFormData }) {
             <input
               type="radio"
               id="71 and above"
-              name="age-range"
+              name="ageRange"
               value="71 and above"
               onChange={handleChange}
             />{" "}

@@ -24,7 +24,7 @@ function TwelvethForm({formData, setFormData}) {
           <input
             type="radio"
             id="Company/Organization"
-            name="age"
+            name="gender"
             value="male"
             onChange={handleChange}
           />{" "}
@@ -34,7 +34,7 @@ function TwelvethForm({formData, setFormData}) {
           <input
             type="radio"
             id="individual"
-            name="age"
+            name="gender"
             value="female"
             onChange={handleChange}
           />{" "}
