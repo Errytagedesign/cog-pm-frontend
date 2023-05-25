@@ -40,6 +40,18 @@ const FourthForm = ({ formData, setFormData }) => {
               className="border border-primary px-2 text-sm outline-none"
               placeholder="Enter name"
               type="checkbox"
+              id="creditReport"
+              name="creditReport"
+              //   checked={formData.credit_report}
+              onChange={handleChange}
+            />{" "}
+            <label htmlFor="credit report">Credit report</label> <br />
+          </div>
+          <div className="pt-4">
+            <input
+              className="border border-primary px-2 text-sm outline-none"
+              placeholder="Enter name"
+              type="checkbox"
               id="taxCertificate"
               name="taxCertificate"
               //   checked= {formData.tax_certificate}
