@@ -19,7 +19,7 @@ const SecondForm = ({ formData, setFormData }) => {
       <main className="my-10">
         <form>
           <div className="py-4">
-            <label>Company/Organization</label> <br />
+            <label className="text-gray-700 font-bold">Client name</label> <br />
             <input
               className="border border-primary px-2 text-sm outline-none mt-2"
               placeholder="Enter name"

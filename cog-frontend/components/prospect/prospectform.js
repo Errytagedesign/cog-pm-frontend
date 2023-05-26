@@ -19,9 +19,12 @@ import TwentethForm from "./twentethForm";
 import TwentyfirstForm from "./twentyfirstForm";
 import TwentysecondForm from "./twentysecondForm";
 import ProspectSummary from "./projectSummary";
+import UploadForm from "./uploadForm";
+import ApplicationType from "./applicationType";
 const ProspectForm = () => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
+    applicationType: "Select application type",
     name: "",
     clientType: "",
     propertyType: "",
@@ -42,6 +45,7 @@ const ProspectForm = () => {
     rentalAmount: "",
     recurringFees: "",
     potentialDate: "",
+    file: "",
     cacIncorporationCertificate: true,
     taxCertificate: true,
     creditReport: true,
@@ -60,41 +64,53 @@ const ProspectForm = () => {
       case 3:
         return <FourthForm formData={formData} setFormData={setFormData} />;
       case 4:
-        return <EightForm formData={formData} setFormData={setFormData} />;
+        return <UploadForm formData={formData} setFormData={setFormData} />;
       case 5:
-        return <NinethForm formData={formData} setFormData={setFormData} />;
+        return (
+          <ApplicationType formData={formData} setFormData={setFormData} />
+        );
       case 6:
-        return <TenthForm formData={formData} setFormData={setFormData} />;
+        return <EightForm formData={formData} setFormData={setFormData} />;
       case 7:
-        return <EleventhForm formData={formData} setFormData={setFormData} />;
+        return <NinethForm formData={formData} setFormData={setFormData} />;
       case 8:
-        return <TwelvethForm formData={formData} setFormData={setFormData} />;
+        return <TenthForm formData={formData} setFormData={setFormData} />;
       case 9:
-        return <ThirteenthForm formData={formData} setFormData={setFormData} />;
+        return <EleventhForm formData={formData} setFormData={setFormData} />;
       case 10:
-        return <FourteenthForm formData={formData} setFormData={setFormData} />;
+        return <TwelvethForm formData={formData} setFormData={setFormData} />;
       case 11:
-        return <FifteenForm formData={formData} setFormData={setFormData} />;
+        return <ThirteenthForm formData={formData} setFormData={setFormData} />;
       case 12:
-        return <SixteenthForm formData={formData} setFormData={setFormData} />;
+        return <FourteenthForm formData={formData} setFormData={setFormData} />;
       case 13:
+        return <FifteenForm formData={formData} setFormData={setFormData} />;
+      case 14:
+        return <SixteenthForm formData={formData} setFormData={setFormData} />;
+      case 15:
         return (
           <SeventeenthForm formData={formData} setFormData={setFormData} />
         );
-      case 14:
-        return <EighteenthForm formData={formData} setFormData={setFormData} />;
-      case 15:
-        return <NineteenthForm formData={formData} setFormData={setFormData} />;
       case 16:
-        return <TwentethForm formData={formData} setFormData={setFormData} />;
+        return <EighteenthForm formData={formData} setFormData={setFormData} />;
       case 17:
+        return <NineteenthForm formData={formData} setFormData={setFormData} />;
+      case 18:
+        return <TwentethForm formData={formData} setFormData={setFormData} />;
+      case 19:
         return (
           <TwentyfirstForm formData={formData} setFormData={setFormData} />
         );
-        case 18: 
-        return <TwentysecondForm formData={formData} setFormData={setFormData}/>
-        case 19:
-          return <ProspectSummary formData={formData} setFormData={setFormData}/>
+      case 20:
+        return (
+          <TwentysecondForm formData={formData} setFormData={setFormData} />
+        );
+      case 21:
+        return (
+          <ProspectSummary formData={formData} setFormData={setFormData} />
+        );
+      case 22:
+        return <UploadForm formData={formData} setFormData={setFormData} />;
       default:
         // return <FirstForm formData={formData} setFormData={setFormData} />;
         return <h1>Your request has been submitted </h1>;
