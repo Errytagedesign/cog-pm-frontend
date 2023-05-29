@@ -58,9 +58,28 @@ li.go2335061104::before {
 .mainColor {
   color: var(--mainColor);
 }
+.popup{
+  background-color: black;
+  display: none;
+  
+}
 
+.popup.open{
+  display: flex;
+  
+}
 
+.active{
+  color: #049561;
+}
+::-webkit-scrollbar{
+  width: 0;
+}
 @font-face {
   font-family: "Euclid";
   src: url("../pages/fonts/Euclid\ Circular\ A\ Bold.ttf");
 }
+
+/* .cog-dashboard-sidenav-icon path{
+  stroke:blue;
+} */

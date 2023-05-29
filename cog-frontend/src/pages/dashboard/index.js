@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import styles from "../../../components/dashboardData/Tabs/TabStyles.module.scss";
 import { TabsData } from "../../../components/dashboardData/Tabs/TabsData";
@@ -47,3 +48,5 @@ export default function Dashboard() {
     </main>
   );
 }
+
+
