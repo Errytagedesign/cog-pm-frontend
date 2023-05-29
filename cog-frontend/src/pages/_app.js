@@ -60,12 +60,17 @@ const myFont = localFont({
   ],
 });
 
-const App = ({ Component, pageProps }) => {
-  return (
-    <Layout className={myFont.className}>
-      <Component {...pageProps} />
-    </Layout>
-  );
-};
+function App({ Component, ...rest }) {
+  const { store, props } = wrapper.useWrappedStore(rest);
+  const { pageProps } = props;
 
-export default wrapper.withRedux(App);
+  return (
+    <Provider store={store}>
+      <Layout className={myFont.className}>
+        <Component {...pageProps} />
+      </Layout>
+    </Provider>
+  );
+}
+
+export default App;
