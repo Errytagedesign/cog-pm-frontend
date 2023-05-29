@@ -9,15 +9,11 @@ const NewProspect = () => {
       <section className="w-1/5">
         <Dashboard />
       </section>
-      <main className="w-4/5 ">
+      <main className="w-full ">
         <ProspectHeader />
         <span className="text-xs text-gray-400 font-bold">Add prospect</span>
-        <div className="flex justify-between w-full m-auto border border-primary py-8 px-4 mt-8">
-          <span className="border-2 w-1/5">
-            {" "}
-            {/* <ProspectDash /> */}
-          </span>
-          <span className="border border-primary py-6 pl-4 mb-12 w-4/5">
+        <div className="flex justify-between w-full  border border-primary py-8 px-4 mt-8">
+          <span className=" w-11/12 ">
             {" "}
             <ProspectForm />
           </span>
