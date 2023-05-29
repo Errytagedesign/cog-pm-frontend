@@ -19,6 +19,6 @@ export const rentalFormSlice = createSlice({
 
 export const { formData, increament } = rentalFormSlice.actions;
 
-export const selectFormData = (state) => console.log(state);
+// export const selectFormData = (state) => console.log(state);
 
 export default rentalFormSlice.reducer;
