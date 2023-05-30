@@ -21,6 +21,8 @@ import TwentysecondForm from "./twentysecondForm";
 import ProspectSummary from "./projectSummary";
 import UploadForm from "./uploadForm";
 import ApplicationType from "./applicationType";
+import MultiStep from "react-multistep";
+import ProgressButtonPrev from "./progressButtonNext";
 const ProspectForm = () => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
@@ -53,6 +55,50 @@ const ProspectForm = () => {
     employmentConfirmation: true,
     policeReport: true,
   });
+  const [progress, setProgress] = useState(0);
+  function handleSubmit() {
+    setPage(page + 1);
+    handleNext();
+  }
+  function handleBack() {
+    setPage(page - 1);
+    handlePrevious();
+  }
+  const handleNext = () => {
+    setProgress(progress + 1);
+  };
+
+  const handlePrevious = () => {
+    setProgress(progress - 1);
+  };
+  const ProspectDash = () => {
+    return (
+      <div>
+        <ul className="text-xs">
+          <li className={`${progress >= 0 ? "text-red-500" : ""} list-none`}>
+            <span
+              className={`${
+                progress >= 0 ? "border-red-500" : ""
+              } border rounded-full px-2 py-1`}
+            >
+              1
+            </span>
+            <span className="text-gray-600">Step 1</span>
+          </li>
+          <li className={`${progress >= 1 ? "text-red-500" : ""}`}>
+            <span className="text-gray-600">Step 1</span>
+          </li>
+          <li className={`${progress >= 2 ? "text-red-500" : ""}`}>
+            <span className="text-gray-600">Step 2</span>
+          </li>
+          <li className={`${progress >= 3 ? "text-red-500" : ""}`}>
+            <span className="text-gray-600">Step 3</span>
+          </li>
+          {/* Add more steps as needed */}
+        </ul>
+      </div>
+    );
+  };
   const conditionalComponent = () => {
     switch (page) {
       case 0:
@@ -116,31 +162,35 @@ const ProspectForm = () => {
         return <h1>Your request has been submitted </h1>;
     }
   };
-  function handleSubmit() {
-    setPage(page + 1);
-  }
 
   return (
-    <section>
-      <div>{conditionalComponent()}</div>
-      <main className="flex justify-end">
-        <div>
-          {" "}
-          {
-            <button
-              onClick={() => setPage(page - 1)}
-              className="mr-4 border py-1 px-8 border-primary rounded text-primary"
-            >
-              Back
-            </button>
-          }
-        </div>
-        <button onClick={handleSubmit}>
-          <div className="bg-primary py-1 px-8 mr-2 rounded text-white">
-            {page >= 0 && "Continue"}
+    <section className="flex justify-between w-full ">
+      <span className="border-2 w-1/5 ml-2 mt-8">
+            {" "}
+            <ProspectDash />
+          </span> 
+      <div className="flex flex-col justify-between w-full  border  border-primary py-8 px-4 mt-8">
+        <div>{conditionalComponent()}</div>
+        <main className="flex justify-end border-green-500">
+          <div>
+            {" "}
+            {
+              <button
+                onClick={page >= 1 && handleBack}
+                className="mr-4 border py-1 px-8 border-primary rounded text-primary"
+              >
+                Back
+              </button>
+            }
           </div>
-        </button>
-      </main>
+
+          <button onClick={handleSubmit}>
+            <div className="bg-primary py-1 px-8 mr-2 rounded text-white">
+              {page >= 0 && "Continue"}
+            </div>
+          </button>
+        </main>
+      </div>
     </section>
   );
 };
