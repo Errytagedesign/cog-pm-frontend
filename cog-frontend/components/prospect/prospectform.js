@@ -21,10 +21,10 @@ import TwentysecondForm from "./twentysecondForm";
 import ProspectSummary from "./projectSummary";
 import UploadForm from "./uploadForm";
 import ApplicationType from "./applicationType";
-import MultiStep from "react-multistep";
-import ProgressButtonPrev from "./progressButtonNext";
+import check from "../../public/assets/icons/check.png"
 const ProspectForm = () => {
   const [page, setPage] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [formData, setFormData] = useState({
     applicationType: "Select application type",
     name: "",
@@ -55,46 +55,381 @@ const ProspectForm = () => {
     employmentConfirmation: true,
     policeReport: true,
   });
-  const [progress, setProgress] = useState(0);
+  //Function Handling Nextpage and nextStep
   function handleSubmit() {
     setPage(page + 1);
     handleNext();
   }
+  //Function Handling PreviousPage And PreviousStep
   function handleBack() {
     setPage(page - 1);
     handlePrevious();
   }
+  // Next Step
   const handleNext = () => {
     setProgress(progress + 1);
   };
-
+  // Previous step
   const handlePrevious = () => {
     setProgress(progress - 1);
   };
+
+  // Steps
   const ProspectDash = () => {
     return (
-      <div>
-        <ul className="text-xs">
-          <li className={`${progress >= 0 ? "text-red-500" : ""} list-none`}>
+      <div className="">
+        {/* Client Details */}
+        <ul className=" list-inside text-xs w-2/3 pl-1">
+          <li >
             <span
               className={`${
-                progress >= 0 ? "border-red-500" : ""
-              } border rounded-full px-2 py-1`}
+                progress >= 0
+                  ? "border rounded-full px-2 py-1 mr-4  w-3 h-3 bg-green-500 text-white border-green-500"
+                  : "border rounded-full px-2 py-1 mr-4 w-3 h-3  text-gray-500 border-gray-500"
+              }`}
             >
               1
             </span>
-            <span className="text-gray-600">Step 1</span>
+            <span className="text-gray-600">Client Details</span>
           </li>
-          <li className={`${progress >= 1 ? "text-red-500" : ""}`}>
-            <span className="text-gray-600">Step 1</span>
+          {page <= 4 && (
+            <div className="">
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 1
+                        ? "border-2  w-3 h-3 border-green-500 mr-6"
+                        : "border-2 w-3 h-3   border-gray-500 mr-6"
+                    }`}
+                  ></div>
+                  Client Type
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 2
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Client Name
+                </span>
+              </li>
+              <li className="mt-4 w-9/12  pl-1 ">
+                <span className="text-gray-600 flex    items-center">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 3
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  <p className="">Verification Checklist</p>
+                </span>
+              </li>
+
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 4
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Verification Upload
+                </span>
+              </li>
+            </div>
+          )}
+        </ul>
+        {/* Property Details */}
+        <ul className=" list-inside text-xs mt-4 w-2/3 pl-1">
+          <li className={`${progress >= 0 ? "" : ""} list-none`}>
+            <span
+              className={`${
+                progress >= 5
+                  ? "border rounded-full px-2 py-1  w-3 h-3 bg-green-500 text-white border-green-500"
+                  : "border rounded-full px-2 py-1 w-3 h-3  text-gray-500 border-gray-500"
+              } border rounded-full px-2 py-1`}
+            >
+              2
+            </span>
+            <span className="text-gray-600">Property Details</span>
           </li>
-          <li className={`${progress >= 2 ? "text-red-500" : ""}`}>
-            <span className="text-gray-600">Step 2</span>
+          {page >= 5 && page <= 9 && (
+            <div className="">
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 5
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Application Type
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 6
+                        ? "border-2  w-3 h-3 border-green-500 mr-4 "
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Property Type
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 7
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Location
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 8
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Unit ID
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 9
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Unit Features
+                </span>
+              </li>
+            </div>
+          )}
+        </ul>
+        {/* Demography */}
+        <ul className=" list-inside text-xs mt-4 w-2/3 pl-1">
+          <li className={`${progress >= 10 ? "text-green-500" : ""} list-none`}>
+            <span
+              className={`${
+                progress >= 10
+                  ? "border rounded-full px-2 py-1  w-3 h-3 bg-green-500 text-white border-green-500"
+                  : "border rounded-full px-2 py-1 w-3 h-3  text-gray-500 border-gray-500"
+              } border rounded-full px-2 py-1`}
+            >
+              3
+            </span>
+            <span className="text-gray-600">Demography</span>
           </li>
-          <li className={`${progress >= 3 ? "text-red-500" : ""}`}>
-            <span className="text-gray-600">Step 3</span>
+          {page >= 10 && page <= 16 && (
+            <div className="">
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 10
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Gender
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 11
+                        ? "border-2  w-3 h-3 border-green-500 mr-4 "
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Religion
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 12
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Tribe
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 13
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Occupation
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 14
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Age Range
+                </span>
+              </li>
+              <li className="mt-4 w-2/3 pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 15
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Industry Type
+                </span>
+              </li>
+              <li className="mt-4 w-max-content pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 16
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Years Of Establishment
+                </span>
+              </li>
+            </div>
+          )}
+        </ul>
+        {/* Amount */}
+        <ul className=" list-inside text-xs mt-4 w-2/3 pl-1">
+          <li className={`${progress >= 0 ? "text-green-500" : ""} list-none`}>
+            <span
+              className={`${
+                progress >= 17
+                  ? "border rounded-full px-2 py-1  w-3 h-3 bg-green-500 text-white border-green-500"
+                  : "border rounded-full px-2 py-1 w-3 h-3  text-gray-500 border-gray-500"
+              } border rounded-full px-2 py-1`}
+            >
+              4
+            </span>
+            <span className="text-gray-600">Amount</span>
           </li>
-          {/* Add more steps as needed */}
+          {page >= 17 && page <= 19 && (
+            <div className="">
+              <li className="mt-4 w-max-content pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 17
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Total amount for new tenant or buyer
+                </span>
+              </li>
+              <li className="mt-4 w-max pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 18
+                        ? "border-2  w-3 h-3 border-green-500 mr-4 "
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Renewal amount and recurring fees
+                </span>
+              </li>
+              <li className="mt-4 w-max pl-1">
+                <span className="text-gray-600 flex">
+                  {" "}
+                  <div
+                    className={`${
+                      progress >= 19
+                        ? "border-2  w-3 h-3 border-green-500 mr-4"
+                        : "border-2 w-3 h-3   border-gray-500 mr-4 "
+                    }`}
+                  ></div>
+                  Total agreement period
+                </span>
+              </li>
+            </div>
+          )}
+        </ul>
+        {/* Signining Date */}
+        <ul className=" list-inside text-xs mt-4 w-2/3 pl-1">
+          <li className={`${progress >= 0 ? "text-green-500" : ""} list-none`}>
+            <span
+              className={`${
+                progress >= 20
+                  ? "border rounded-full px-2 py-1  w-3 h-3 bg-green-500 text-white border-green-500"
+                  : "border rounded-full px-2 py-1 w-3 h-3  text-gray-500 border-gray-500"
+              } border rounded-full px-2 py-1`}
+            >
+              5
+            </span>
+            <span className="text-gray-600">Signing date</span>
+          </li>
+        </ul>
+        <ul className=" list-inside text-xs mt-4 w-2/3 pl-1">
+          <li className={`${progress >= 0 ? "text-green-500" : ""} list-none`}>
+            <span
+              className={`${
+                progress >= 21
+                  ? "border rounded-full px-2 py-1  w-3 h-3 bg-green-500 text-white border-green-500"
+                  : "border rounded-full px-2 py-1 w-3 h-3  text-gray-500 border-gray-500 "
+              }`}
+            >
+              6
+            </span>
+            <span className="text-gray-600">Summary</span>
+          </li>
         </ul>
       </div>
     );
@@ -155,8 +490,7 @@ const ProspectForm = () => {
         return (
           <ProspectSummary formData={formData} setFormData={setFormData} />
         );
-      case 22:
-        return <UploadForm formData={formData} setFormData={setFormData} />;
+
       default:
         // return <FirstForm formData={formData} setFormData={setFormData} />;
         return <h1>Your request has been submitted </h1>;
@@ -165,23 +499,23 @@ const ProspectForm = () => {
 
   return (
     <section className="flex justify-between w-full ">
-      <span className="border-2 w-1/5 ml-2 mt-8">
-            {" "}
-            <ProspectDash />
-          </span> 
-      <div className="flex flex-col justify-between w-full  border  border-primary py-8 px-4 mt-8">
+      <span className=" w-1/2 ml-2 mt-8 w-2/3 pl-1 ">
+        {" "}
+        <ProspectDash />
+      </span>
+      <div className="flex flex-col justify-between w-full  border  border-primary py-8 px-4 mt-8 w-2/3 pl-1">
         <div>{conditionalComponent()}</div>
         <main className="flex justify-end border-green-500">
           <div>
             {" "}
-            {
+            {page >= 1 && (
               <button
-                onClick={page >= 1 && handleBack}
+                onClick={handleBack}
                 className="mr-4 border py-1 px-8 border-primary rounded text-primary"
               >
                 Back
               </button>
-            }
+            )}
           </div>
 
           <button onClick={handleSubmit}>

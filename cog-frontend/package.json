@@ -12,6 +12,7 @@
     "serve-json": "json-server --watch db.json --port 4000"
   },
   "dependencies": {
+    "@chakra-ui/stepper": "^2.2.0",
     "@reduxjs/toolkit": "^1.9.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
